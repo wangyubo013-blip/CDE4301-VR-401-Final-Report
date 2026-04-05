@@ -12,7 +12,7 @@ This repository contains the project website for the CDE4301 Final Report.
 
 ## Project Website
 
-The complete interim report is published here: [https://zhangyn0218.github.io/cde4301-project/](放网址)
+The complete interim report is published here: [https://wangyubo013-blip.github.io/CDE4301-VR-401-Final-Report/]
 
 ## Repository Structure
 
