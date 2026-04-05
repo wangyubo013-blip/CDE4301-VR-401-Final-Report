@@ -1,4 +1,0 @@
-comparison,category,ref_count,prev_error_count,next_error_count,error_reduction,prev_error_rate,next_error_rate,relative_error_reduction
-Large_v3_stage,all_terms,1053,347,282,65,0.3295346628679962,0.2678062678062678,0.1873198847262248
-Large_v3_stage,aviation_terms,535,185,132,53,0.34579439252336447,0.2467289719626168,0.2864864864864865
-Large_v3_stage,non_aviation_terms,518,162,150,12,0.3127413127413127,0.28957528957528955,0.07407407407407407
