@@ -46,7 +46,6 @@ h2 { border-bottom: 1px solid var(--border); padding-bottom: .25rem; }
 p { margin: 1rem 0; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
 code, pre, kbd, samp { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 pre.code, pre code {
   background: var(--code-bg);
@@ -93,6 +92,59 @@ blockquote {
   margin: 1rem 0 2rem;
 }
 .toc h2 { margin-top: 0; border: none; }
+
+.report-table {
+width: 100%;
+border-collapse: collapse;
+font-family: Arial, sans-serif;
+font-size: 16px;
+background: #e9e9e9;
+border-top: 3px solid #222;
+border-bottom: 3px solid #222;
+}
+
+.report-table caption {
+caption-side: bottom;
+  font-size: .95rem;
+  color: var(--muted);
+  margin-top: .5rem;
+}
+
+.report-table thead th {
+font-weight: 700;
+text-align: center;
+padding: 10px 16px;
+border-bottom: 3px solid #222;
+white-space: nowrap;
+}
+
+.report-table td {
+padding: 12px 16px;
+vertical-align: middle;
+text-align: center;
+}
+
+.report-table td:first-child,.report-table th:first-child {
+text-align: left;
+}
+
+.report-table td:not(:first-child),.report-table th:not(:first-child) {
+text-align: center;
+}
+
+.group-row td {
+font-weight: 700;
+padding-top: 14px;
+padding-bottom: 6px;
+}
+
+.separator-top td {
+border-top: 2px solid #222;
+}
+
+.bold-label {
+font-weight: 700;
+}
 
 ol.list-alpha { list-style-type: upper-alpha; }
 ol.list-decimal { list-style-type: decimal; }
@@ -278,8 +330,9 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p>We then proceeded to evaluate different versions of the Faster-Whisper model in terms of VRAM usage, WER, and processing time using a test clip from the Busan Scenario. Results are summarized in the tables below:</p>
 
-<p><strong>Table 4.2a. Whisper Model Comparison</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.2a. Whisper Model Comparison</caption>
   <thead>
     <tr>
       <th>Whisper Model</th>
@@ -298,8 +351,8 @@ ol.list-decimal { list-style-type: decimal; }
   </tbody>
 </table>
 
-<p><strong>Table 4.2b. Model Evaluation on Busan Scenario Audio Sample</strong></p>
-<table>
+<table class="report-table">
+<caption>Table 4.2b. Model Evaluation on Busan Scenario Audio Sample</caption>
   <thead>
     <tr>
       <th>Model</th>
@@ -309,11 +362,12 @@ ol.list-decimal { list-style-type: decimal; }
     </tr>
   </thead>
   <tbody>
-    <tr><td>Faster-Whisper Tiny</td><td>9.224</td><td>0.969</td><td>1.217</td></tr>
-    <tr><td>Faster-Whisper Small</td><td>9.305</td><td>0.594</td><td>0.688</td></tr>
-    <tr><td>Faster-Whisper Medium</td><td>6.984</td><td>0.480</td><td>0.516</td></tr>
-    <tr><td>Faster-Whisper Large-v3</td><td>8.625</td><td>0.467</td><td>0.521</td></tr>
-    <tr><td>Azure (Currently implemented)</td><td>6.513</td><td>0.485</td><td>0.527</td></tr>
+	<tr class="group-row"><td colspan="4">Faster-Whisper</td></tr>
+    <tr><td>Tiny</td><td>9.224</td><td>0.969</td><td>1.217</td></tr>
+    <tr><td>Small</td><td>9.305</td><td>0.594</td><td>0.688</td></tr>
+    <tr><td>Medium</td><td>6.984</td><td>0.480</td><td>0.516</td></tr>
+    <tr><td>Large-v3</td><td>8.625</td><td>0.467</td><td>0.521</td></tr>
+    <tr class="separator-top"><td class="bold-label">Azure (Currently implemented)</td><td>6.513</td><td>0.485</td><td>0.527</td></tr>
   </tbody>
 </table>
 
@@ -352,21 +406,20 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p>Training was carried out for a total of 1600 iterations, corresponding to approximately 3.3 epochs over the dataset. The effectiveness of the fine-tuning process was evaluated using WER across training epochs:</p>
 
-<p><strong>Table 4.3b. WER Changes over Training Epochs</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Stage</th>
-      <th>Baseline</th>
-      <th>Epoch 2.4</th>
-      <th>Epoch 2.52</th>
-      <th>Epoch 2.94</th>
-      <th>Epoch 3.36</th>
-    </tr>
-  </thead>
+
+<table class="report-table">
+<caption>Table 4.3b. WER Changes over Training Epochs</caption>
   <tbody>
     <tr>
-      <td>WER</td>
+      <th scope="row">Stage</th>
+      <td>Baseline</td>
+      <td>Epoch 2.4</td>
+      <td>Epoch 2.52</td>
+      <td>Epoch 2.94</td>
+      <td>Epoch 3.36</td>
+    </tr>
+    <tr>
+      <th scope="row">WER</td>
       <td>9.95%</td>
       <td>2.464%</td>
       <td>2.566%</td>
@@ -408,8 +461,9 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p>The baseline model exhibits relatively high WER across all samples, ranging from 0.2548 to 0.6613, indicating limited generalization to real-world pilot speech. After applying LoRA fine-tuning, a substantial reduction in WER is observed across all samples. For example, Sample 4 improves from 0.2991 to 0.1729, and Sample 5 from 0.4353 to 0.2118, demonstrating the effectiveness of domain adaptation. Further improvements are achieved by incorporating prompt-based vocabulary guidance. The combined LoRA + prompt approach consistently yields the lowest WER across all samples, with notable gains such as Sample 4 reaching 0.1308 and Sample 5 reaching 0.1588. Overall, prompt engineering contributes an additional 5–10 percentage point reduction in WER compared to LoRA alone.</p>
 
-<p><strong>Table 4.4a. Model WER on Samples of Real Pilots</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.4a. Model WER on Samples of Real Pilots</caption>
   <thead>
     <tr>
       <th>Model</th>
@@ -441,8 +495,9 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p>Aggregate corpus WER alone does not fully reflect how recognition quality changes in practical use, because it does not show whether improvements are distributed broadly across utterances or concentrated in only a few cases. To provide a more interpretable view, utterance-level WER is compared against the Azure baseline for each model configuration. As summarized in Table 4.4b, each utterance is classified as Improved, Same, or Worsened depending on whether its utterance-level WER decreases, remains unchanged, or increases relative to the Azure baseline.</p>
 
-<p><strong>Table 4.4b. Progressive Improvements of Utterance for Stages Compared with Baseline</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.4b. Progressive Improvements of Utterance for Stages Compared with Baseline</caption>
   <thead>
     <tr>
       <th>Model</th>
@@ -450,12 +505,12 @@ ol.list-decimal { list-style-type: decimal; }
       <th>Same Counts</th>
       <th>Worsened Counts</th>
     </tr>
+	<tr><th>Azure (Baseline)</th><th colspan="3" style="text-align:center;">Total: 247 utterances</th></tr>
   </thead>
   <tbody>
-    <tr><td>Azure (Baseline)</td><td colspan="3" style="text-align:center;">Total: 247 utterances</td></tr>
     <tr><td>Large-v3</td><td>76</td><td>133</td><td>54</td></tr>
     <tr><td>LoRA</td><td>104</td><td>128</td><td>34</td></tr>
-    <tr><td>prompt</td><td>127</td><td>17</td><td>19</td></tr>
+    <tr><td>prompt</td><td>127</td><td>117</td><td>19</td></tr>
   </tbody>
 </table>
 
@@ -466,10 +521,10 @@ ol.list-decimal { list-style-type: decimal; }
 <p><strong>Improvement: phrase recovery</strong></p>
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
-  <tbody>
-    <tr><td>Reference</td><td>Obtained runway 18R. Landing checklist complete</td></tr>
-    <tr><td>Azure</td><td>Obtain runway 1/8. Right lending track is complete</td></tr>
-    <tr><td>LoRA</td><td>obtain runway 18r landing checklist complete</td></tr>
+  <tbody >
+    <tr><td style="width:20%;">Reference</td><td>Obtained runway 18R. Landing checklist complete</td></tr>
+    <tr><td style="width:20%;">Azure</td><td>Obtain runway 1/8. Right lending track is complete</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>obtain runway 18r landing checklist complete</td></tr>
   </tbody>
 </table>
 
@@ -477,9 +532,9 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>cleared to join downwind runway 18R.</td></tr>
-    <tr><td>Azure</td><td>cleared to join. Don't win? Runaway. Want it right?</td></tr>
-    <tr><td>LoRA</td><td>cleared to join downwind runway 18r</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>cleared to join downwind runway 18R.</td></tr>
+    <tr><td style="width:20%;">Azure</td><td>cleared to join. Don't win? Runaway. Want it right?</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>cleared to join downwind runway 18r</td></tr>
   </tbody>
 </table>
 
@@ -489,17 +544,17 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>LNAV Available</td></tr>
-    <tr><td>Azure</td><td>Are available.</td></tr>
-    <tr><td>LoRA</td><td>lnav available</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>LNAV Available</td></tr>
+    <tr><td style="width:20%;">Azure</td><td>Are available.</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>lnav available</td></tr>
   </tbody>
 </table>
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>Route 2 Activated. LNAV available.</td></tr>
-    <tr><td>Azure</td><td>route to activated LNEF available</td></tr>
-    <tr><td>LoRA</td><td>route 2 activated lnav available</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>Route 2 Activated. LNAV available.</td></tr>
+    <tr><td style="width:20%;">Azure</td><td>route to activated LNEF available</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>route 2 activated lnav available</td></tr>
   </tbody>
 </table>
 
@@ -509,9 +564,9 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>6000 feet checked.</td></tr>
-    <tr><td>Azure</td><td>6000 feet checked.</td></tr>
-    <tr><td>LoRA</td><td>6 000 feet checked</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>6000 feet checked.</td></tr>
+    <tr><td style="width:20%;">Azure</td><td>6000 feet checked.</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>6 000 feet checked</td></tr>
   </tbody>
 </table>
 
@@ -523,9 +578,9 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>Speedbrake</td></tr>
-    <tr><td>LoRA</td><td>speed break</td></tr>
-    <tr><td>prompt</td><td>speedbrake</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>Speedbrake</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>speed break</td></tr>
+    <tr><td style="width:20%;">prompt</td><td>speedbrake</td></tr>
   </tbody>
 </table>
 
@@ -533,17 +588,17 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>Roger. Cycling the FDs</td></tr>
-    <tr><td>LoRA</td><td>hey roger cycling to fd sir</td></tr>
-    <tr><td>prompt</td><td>ok roger cycling the fds</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>Roger. Cycling the FDs</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>hey roger cycling to fd sir</td></tr>
+    <tr><td style="width:20%;">prompt</td><td>ok roger cycling the fds</td></tr>
   </tbody>
 </table>
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>Heading Sel. Alt Hold.</td></tr>
-    <tr><td>LoRA</td><td>heading cell auteuil</td></tr>
-    <tr><td>prompt</td><td>heading sel alt hold</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>Heading Sel. Alt Hold.</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>heading cell auteuil</td></tr>
+    <tr><td style="width:20%;">prompt</td><td>heading sel alt hold</td></tr>
   </tbody>
 </table>
 
@@ -553,9 +608,9 @@ ol.list-decimal { list-style-type: decimal; }
 <table>
   <thead><tr><th></th><th>Transcript</th></tr></thead>
   <tbody>
-    <tr><td>Reference</td><td>Add 4 whites. High. pitch down a bit.</td></tr>
-    <tr><td>LoRA</td><td>and for whites high switch down a bit</td></tr>
-    <tr><td>prompt</td><td>55 and 4 whites high</td></tr>
+    <tr><td style="width:20%;">Reference</td><td>Add 4 whites. High. pitch down a bit.</td></tr>
+    <tr><td style="width:20%;">LoRA</td><td>and for whites high switch down a bit</td></tr>
+    <tr><td style="width:20%;">prompt</td><td>55 and 4 whites high</td></tr>
   </tbody>
 </table>
 
@@ -565,21 +620,23 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p>The numbers of substitution, deletion, and insertion errors are compared across model configurations using Azure as the common baseline in Table 4.4c.</p>
 
-<p><strong>Table 4.4c. Improvements in Number of Substitution, Deletion and Insertion for Stages</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.4c. Improvements in Number of Substitution, Deletion and Insertion for Stages</caption>
   <thead>
     <tr>
-      <th>Model</th>
+      <th>Model (change vs. baseline)</th>
       <th>Substitution</th>
       <th>Deletion</th>
       <th>Insertion</th>
     </tr>
+	<tr><th>Azure (baseline)</th><th>295</th><th>52</th><th>152</th></tr>
   </thead>
   <tbody>
-    <tr><td>Azure (Baseline)</td><td>295</td><td>52</td><td>152</td></tr>
-    <tr><td>Large-v3 (change vs. baseline)</td><td>−44</td><td>−21</td><td>−29</td></tr>
-    <tr><td>LoRA (change vs. baseline)</td><td>−123</td><td>−25</td><td>−83</td></tr>
-    <tr><td>prompt (change vs. baseline)</td><td>−157</td><td>−29</td><td>−91</td></tr>
+    
+    <tr><td>Large-v3</td><td>−44</td><td>−21</td><td>−29</td></tr>
+    <tr><td>LoRA</td><td>−123</td><td>−25</td><td>−83</td></tr>
+    <tr><td>prompt</td><td>−157</td><td>−29</td><td>−91</td></tr>
   </tbody>
 </table>
 
@@ -587,8 +644,9 @@ ol.list-decimal { list-style-type: decimal; }
 
 <h4>4.4.4.1 Word-level Analysis: Key Aviation Terms</h4>
 
-<p><strong>Table 4.4d. Counts of word errors for key aviation terms</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.4d. Counts of word errors for key aviation terms</caption>
   <thead>
     <tr>
       <th>Word</th>
@@ -600,16 +658,16 @@ ol.list-decimal { list-style-type: decimal; }
     </tr>
   </thead>
   <tbody>
-    <tr><td>landing</td><td>34</td><td>17</td><td>7</td><td>7</td><td>0.323</td></tr>
+    <tr><td>landing</td><td>31</td><td>17</td><td>7</td><td>7</td><td>0.323</td></tr>
     <tr><td>flaps</td><td>27</td><td>14</td><td>1</td><td>2</td><td>0.444</td></tr>
     <tr><td>checklist</td><td>15</td><td>7</td><td>4</td><td>4</td><td>0.267</td></tr>
     <tr><td>joining</td><td>14</td><td>5</td><td>2</td><td>2</td><td>0.214</td></tr>
-    <tr><td>18r</td><td>29</td><td>29</td><td>2</td><td>8</td><td>0.724</td></tr>
+    <tr><td style="border-bottom: 3px solid #222;">18r</td><td style="border-bottom: 3px solid #222;">29</td><td style="border-bottom: 3px solid #222;">29</td><td style="border-bottom: 3px solid #222;">2</td><td style="border-bottom: 3px solid #222;">8</td><td style="border-bottom: 3px solid #222;">0.724</td></tr>
     <tr><td>downwind</td><td>14</td><td>7</td><td>5</td><td>1</td><td>0.429</td></tr>
     <tr><td>sight</td><td>13</td><td>13</td><td>5</td><td>3</td><td>0.769</td></tr>
-    <tr><td>lnav</td><td>14</td><td>7</td><td>4</td><td>2</td><td>0.714</td></tr>
-    <tr><td>alt</td><td>11</td><td>1</td><td>8</td><td>1</td><td>1.0</td></tr>
-    <tr><td>hold</td><td>11</td><td>8</td><td>5</td><td>1</td><td>0.727</td></tr>
+    <tr><td style="border-bottom: 3px solid #222;">lnav</td><td style="border-bottom: 3px solid #222;">7</td><td style="border-bottom: 3px solid #222;">7</td><td style="border-bottom: 3px solid #222;">4</td><td style="border-bottom: 3px solid #222;">2</td><td style="border-bottom: 3px solid #222;">0.714</td></tr>
+    <tr><td>alt</td><td>11</td><td>11</td><td>8</td><td>0</td><td>1.0</td></tr>
+    <tr><td>hold</td><td>11</td><td>8</td><td>5</td><td>0</td><td>0.727</td></tr>
     <tr><td>sel</td><td>8</td><td>8</td><td>8</td><td>1</td><td>0.875</td></tr>
     <tr><td>speedbrake(s)</td><td>11</td><td>11</td><td>11</td><td>1</td><td>0.909</td></tr>
   </tbody>
@@ -619,8 +677,15 @@ ol.list-decimal { list-style-type: decimal; }
 
 <h4>4.4.4.2 Word Error Analysis in Aviation-related Categorization</h4>
 
-<p><strong>Table 4.4f. Counts of word errors categorized by aviation domain</strong></p>
-<table>
+<blockquote><em>"AVIATION_TERMS = {"lnav", "vnav", "fms", "cdu", "fcu", "ils", "vor", "loc", "glideslope", "autopilot", "autothrottle", "thrust", "speedbrake", "spoiler", "flaps","checklist", "landing", "gear", "runway", "tower", "downwind", "captain","roger", "busan", "singapore", "route", "direct", "activate", "activated","available", "green", "light", "clearance", "altitude", "heading","exterior", "below", "line", "obtained", "obtain","18r", "ab18r", "616", "700", "30", "2","pitch", "high", "whites", "check"}
+"</em>
+<table class="report-table">
+<caption>List 4.4e. Aviation related words included in the test dataset</caption>
+</table class="report-table">
+</blockquote>
+
+<table class="report-table">
+<caption>Table 4.4f. Counts of word errors categorized by aviation domain</caption>
   <thead>
     <tr>
       <th>Category</th>
@@ -628,25 +693,28 @@ ol.list-decimal { list-style-type: decimal; }
       <th>Non-aviation</th>
       <th>Total</th>
     </tr>
+	<tr><th>Reference Count</th><th>535</tdh><th>518</th><th>1053</th></tr>
   </thead>
   <tbody>
-    <tr><td>Reference Count</td><td>535</td><td>518</td><td>1053</td></tr>
     <tr><td>Azure Error Count</td><td>185</td><td>162</td><td>347</td></tr>
     <tr><td>LoRA Error Count</td><td>84</td><td>115</td><td>199</td></tr>
-    <tr><td>Prompt Error Count</td><td>79</td><td>82</td><td>161</td></tr>
+    <tr><td style="border-bottom: 3px solid #222;">Prompt Error Count</td><td style="border-bottom: 3px solid #222;">79</td><td style="border-bottom: 3px solid #222;">82</td><td style="border-bottom: 3px solid #222;">161</td></tr>
     <tr><td>Azure Error Rate</td><td>0.3458</td><td>0.3127</td><td>0.3295</td></tr>
     <tr><td>LoRA Error Rate</td><td>0.1570</td><td>0.2220</td><td>0.1890</td></tr>
-    <tr><td>Prompt Error Rate</td><td>0.1476</td><td>0.1583</td><td>0.1528</td></tr>
-    <tr><td>Absolute Error Rate Reduction</td><td>0.1981</td><td>0.1544</td><td>0.1766</td></tr>
+    <tr><td style="border-bottom: 3px solid #222;">Prompt Error Rate</td><td style="border-bottom: 3px solid #222;">0.1476</td><td style="border-bottom: 3px solid #222;">0.1583</td><td style="border-bottom: 3px solid #222;">0.1528</td></tr>
   </tbody>
+  <thead>
+    <tr><th>Absolute Error Rate Reduction</th><th>0.1981</th><th>0.1544</th><th>0.1766</th></tr>
+  </thead>
 </table>
 
 <p>The later models provide stronger gains on aviation-specific vocabulary than on non-aviation words. This is an important result, because the main objective of the ASR improvement is not simply better general transcription, but better recognition of operationally meaningful cockpit terms. The larger reduction on aviation-specific words indicates that domain adaptation and prompting are aligned with the actual needs of the task.</p>
 
 <h4>4.4.4.3 Persistent Word Error Analysis</h4>
 
-<p><strong>Table 4.4g. Words with persistent errors</strong></p>
-<table>
+
+<table class="report-table">
+<caption>Table 4.4g. Words with persistent errors</caption>
   <thead>
     <tr>
       <th>Word</th>
@@ -659,7 +727,7 @@ ol.list-decimal { list-style-type: decimal; }
   </thead>
   <tbody>
     <tr><td>singapore</td><td>17</td><td>1</td><td>0</td><td>3</td><td>−0.118</td></tr>
-    <tr><td>exterior</td><td>9</td><td>2</td><td>3</td><td>3</td><td>0.111</td></tr>
+    <tr><td>exterior</td><td>9</td><td>2</td><td>3</td><td>3</td><td>-0.111</td></tr>
     <tr><td>"616"</td><td>16</td><td>3</td><td>1</td><td>3</td><td>0</td></tr>
     <tr><td>obtain</td><td>8</td><td>6</td><td>8</td><td>6</td><td>0</td></tr>
   </tbody>
@@ -742,7 +810,7 @@ ol.list-decimal { list-style-type: decimal; }
 
 <p><strong>Phase 2: Graded Arithmetic Task (10 minutes total).</strong> Participants completed five difficulty levels, each lasting 2 minutes, for a total task duration of 10 minutes. Each trial presented a mental arithmetic problem on screen, and participants had 10 seconds to select a single-digit answer (0–9) using an on-screen button interface. Throughout the task phase, participants received continuous performance feedback displaying their cumulative accuracy relative to a stated "average target: 90%," which is a social-evaluative manipulation designed to amplify stress by implying subpar performance. The five difficulty levels were structured as follows:</p>
 
-<table>
+<table class="report-table">
   <thead>
     <tr><th>Level</th><th>Operands</th><th>Operations</th><th>Example</th></tr>
   </thead>
