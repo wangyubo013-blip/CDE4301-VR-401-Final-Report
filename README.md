@@ -18,17 +18,15 @@ The complete final report is published here: [https://wangyubo013-blip.github.io
 
 ```
 .
-├── index.md                # Main content file with complete report
-├── _config.yml             # Jekyll configuration
-├── assets/                 # Images, CSS, and other assets
-│   └── images/             # Project images and figures
-│   └── samples/            # Project event log samples
-│   └── Tables/             # Project report tables
-├── ganttchart.pdf          # Project schedule for next semester
-├── Preprocess.py           # Preprocess Python Pipeline. Manual input version.
-├── PreprocessDedicated.py  # Preprocess Python Pipeline. Specific pair of log and video recording.
-├── .gitignore              # Git ignore file
-└── README.md               # This file
+
+├── assets/
+│   └── images/                             # Project images and figures
+├── Scripts/
+│   ├── Workstream1_SpeechRecognition/      # Speech recognition pipeline and results
+│   └── Workstream2_PhysiologicalSensing/   # Physiological sensing workflow
+├── faster_whisper/                         # The fine-tuned model in Workstream1
+├── README.md                               # This file
+└── index.html                              # Main webpage
 ```
 All figures referenced in *index.md* are stored in `assets/images/`.
 
