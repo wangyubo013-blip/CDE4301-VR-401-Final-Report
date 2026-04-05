@@ -1,0 +1,5 @@
+comparison,prev_model,next_model,S_prev,S_next,S_reduction,D_prev,D_next,D_reduction,I_prev,I_next,I_reduction,total_errors_prev,total_errors_next,total_error_reduction,Improvement,Same,Worsen
+Large_v3_stage,Azure,Raw prediction,295,251,44,52,31,21,152,122,30,499,404,95,76,133,54
+Prompt_stage,LoRA prediction,LoRA+Prompt prediction,172,138,34,27,23,4,69,61,8,268,222,46,50,189,24
+Azure_to_LoRA,Azure,LoRA prediction,295,172,123,52,27,25,152,69,83,499,268,231,104,128,31
+Azure_to_Final,Azure,LoRA+Prompt prediction,295,138,157,52,23,29,152,61,91,499,222,277,127,117,19

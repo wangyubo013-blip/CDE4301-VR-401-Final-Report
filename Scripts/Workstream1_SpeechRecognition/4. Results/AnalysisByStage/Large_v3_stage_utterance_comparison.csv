@@ -1,0 +1,264 @@
+utt_id,prev_wer,next_wer,delta_wer,comparison,ref,prev_text,next_text
+01-01,0.6363636363636364,0.36363636363636365,-0.2727272727272727,Improvement,Busan Tower Singapore 616 runway in sight joining downwind Runway 18R,Busan Towers Singapore 616 runway inside joining down runway one in right.,busan tower singapore 616 runway inside joining downwind runway 1e right
+01-02,0.0,0.25,0.25,Worsen,"Roger, activate Route 2.","Roger, activate Route 2.",roger activity route 2
+01-03,1.6666666666666667,1.6666666666666667,0.0,Same,Roger. Direct AB18R,"Roger directs a bit Money, right?",roger diving will be money right
+01-04,0.6,0.2,-0.39999999999999997,Improvement,Flaps 30. Flaps at 30,Flights 30. Febsat 30.,flaps 30 flaps 30
+01-05,0.18181818181818182,0.45454545454545453,0.2727272727272727,Worsen,VS 700 check. Roger Landing Checklist below the line. Landing Gear.,Via 700 check. Roger Dancing checklist below the line landing gear.,ds700 check roger landing checklist preloaded line landing here
+01-06,0.0,0.0,0.0,Same,30 Green light exterior lights on landing clearance.,30 Green light exterior lights on landing clearance.,30 green light exterior lights on landing clearance
+01-07,1.0,0.5,-0.5,Improvement,Obtained runway 18R. Landing checklist complete.,Obtain runway 1/8. Right landing track is complete.,optane runway 18r landing channel is complete
+01-08,0.5,0.6666666666666666,0.16666666666666663,Worsen,Captain wrong runway. Captain wrong runway.,Captain run runway. Katyn Long runway.,captain ron renwee captain ron renwee
+01-09,0.7272727272727273,0.2727272727272727,-0.4545454545454546,Improvement,Busan Tower Singapore 616 runway in sight joining downwind Runway 18R,The Sun Tower Singapore 616 runway inside joining downway 1/8 right.,busan tower singapore 616 runway inside joining darwin runway 18r
+01-10,0.75,0.25,-0.5,Improvement,Roger. Activate Route 2,Roger,roger activating route 2
+01-11,0.375,1.0,0.625,Worsen,Execute confirm. Route 2 Activated. Route 2 Activated.,Execute confirm. Go to Activated. Route to activated.,execute confirm good to activate it good to activate it
+01-12,0.75,0.75,0.0,Same,Roger. Direct to AB18R,Roger direct to Urban Manam Drive.,roger direct to abim morning road
+01-13,0.625,0.625,0.0,Same,Roger landing checklist. VS700 Check. Down Speedbreaks. Flaps,Roger learning Chinese. BS700 check. Down spin breaks.,roger landing chain list ds700 check downspeed brakes flaps
+01-14,0.0,0.0,0.0,Same,30 Green light exterior lights on landing clearance.,30 Green light exterior lights on landing clearance.,30 green light exterior lights on landing clearance
+01-15,0.3333333333333333,0.16666666666666666,-0.16666666666666666,Improvement,Obtain runway 18R. Landing checklist complete.,Obtain runway 180 right landing checklist complete.,optane runway 18r landing checklist complete
+01-16,0.3333333333333333,0.6666666666666666,0.3333333333333333,Worsen,Roger. Cycling FDs,Roger Cycling Abdies.,roger the cycling mds
+03-01,0.6666666666666666,0.6666666666666666,0.0,Same,Runway in sight. Joining run. Joining downwind runway 18R.,"Are we inside joining, run joining downwind runway 1/8, right?",i will inside joining downwind runway 18r singapore
+03-02,1.8,0.4,-1.4,Improvement,Good to joining downwind runway 18R. To land Runway 18R. ,Put it joint down. We didn't run me while you're right Lynn Rahway when it right.,click join downwind runway 18r land runway 18r
+03-03,0.45454545454545453,0.45454545454545453,0.0,Same,and passing final approach fix WAYBI 2600 feet that was checked.,And a passing language picks may be 2600 feet that was checked.,and passing for average peaks will be 2600 feet that was checked
+03-04,0.5714285714285714,0.7142857142857143,0.1428571428571429,Worsen,Heading Sel. Alt hold. Route 2 Activate,Outlook Excel out hole route 2 activate.,excel outfall root 2 activate
+03-05,0.0,0.0,0.0,Same,Confirm,Confirm,confirm
+03-06,0.0,1.0,1.0,Worsen,Confirm,Confirm,awesome
+03-07,0.6363636363636364,0.5454545454545454,-0.09090909090909094,Improvement,LNAV available. And alt hold. Missed approach altitude is 6000 feet. ,Connect available and our home is approached. Our attitude is 6000 feet.,and if available and not hold miss approach altitude is 6 000 feet
+03-08,1.0,1.0,0.0,Same,LNAV.  Thousand check,MF6000 checked.,7f 6000 checked
+03-09,0.4,0.4,0.0,Same,The next altitude is 1200. ,The next altitude is 1000. 200. ,next altitude is 1200m
+03-10,0.5,0.5,0.0,Same,Yes. Minus 700 check. ,"Yes, my son, check.",yes myself check
+03-11,0.875,1.25,0.375,Worsen,May I check is the right landing gear?,At Chase Building Gear.,that takes me to the lane i didn t give a
+03-12,1.5,2.0,0.5,Worsen,Down. Speedbreak.,Balance speed brick.,now on speed brick
+03-13,0.625,0.375,-0.25,Improvement,"30, green lights exterior lights, On. Landing Clearance.",30 green light extra. It's a on landing clearance.,30 green light extracts are on landing clearance
+03-14,1.1666666666666667,0.8333333333333334,-0.33333333333333337,Improvement,Obtain Runway 18R. Landing checklist complete,Obtaining one and right my check is complete.,t in runway 18r main track is complete
+03-15,0.25,0.0,-0.25,Improvement,And 950 on profile.,"And uh, 950 on profile.",and 950 on profile
+03-16,1.0,0.75,-0.25,Improvement,2 red 2 whites.,3828,283 whites
+03-17,0.5,0.5,0.0,Same,and stablized.,And stabilized.,and stabilized
+03-18,0.2857142857142857,0.2857142857142857,0.0,Same,And WAYBI final approach fix 2600 feet.,And maybe final push fix 2600 feet.,and maybe final push fix 2600 feet
+03-19,1.1428571428571428,0.8571428571428571,-0.2857142857142857,Improvement,Runway in sight. Joining downwind Runway 18R.,Probably Insight and joining Darwin Rahway want it right.,rally inside join darwin rally 18r
+03-20,0.8181818181818182,0.6363636363636364,-0.18181818181818188,Improvement,Busan Tower Singapore 616 runway in sight. Joining downwind runway 18R.,Busan Towers Singapore 616 runway inside Join Darwin. When we want it right?,busan tower singapore 616 bramway inside join bramway bramway 18 rides
+03-21,1.0909090909090908,0.45454545454545453,-0.6363636363636362,Improvement,Joining downwind runway 18R and to land runway 18R. Singapore 616.,"Actually joined WWE 1/8 right And uh, we had to land runway 1/8 right?",and clear join down runway 18r and clear to land runway 18r singapore 616
+03-22,0.0,2.0,2.0,Worsen,Confirm,Confirm,fum fum
+03-23,0.0,0.0,0.0,Same,Execute confirm.,Execute confirm.,execute confirm
+03-24,1.0,1.5,0.5,Worsen,Heading Sel.,,i think so
+03-25,0.625,0.625,0.0,Same,and alt hold missed approach altitude is 6000,And who misapproached her? Dude is 6000,and out full miss approach already is 6000 feet
+03-26,1.3333333333333333,0.6666666666666666,-0.6666666666666666,Improvement,Route 2 activated,How to activate it?,it s activated
+03-27,1.0,1.0,0.0,Same,Direct AB18R. Execute confirm,Direct payment one minute right execute confirm.,direct beam 1 minute right execute confirm
+03-28,0.6666666666666666,1.6666666666666667,1.0,Worsen,Confirm. LNAV available ,Cotton unless available.,awesome i have a billabong
+03-29,0.6666666666666666,0.6666666666666666,0.0,Same,Flaps at 30,Web set 30.,website 30
+03-30,1.0,1.0,0.0,Same,Down. Speedbreak.,Down speed brick.,down speed break
+03-31,1.0,2.0,1.0,Worsen,Flaps.,Flip,let s
+03-32,1.0,1.0,0.0,Same,Flaps.,flip.,flips
+03-33,1.0,1.0,0.0,Same,Flaps,Flips.,
+03-34,0.0,0.1111111111111111,0.1111111111111111,Worsen,30 green light exterior lights are on. Landing clearance.,30 green light exterior lights are on. Landing clearance.,30 green light exterior lights are on lighting clearance
+03-35,1.7142857142857142,1.7142857142857142,0.0,Same,8R. Obtain Runway 18R. Landing checklist complete,8R. I think you might want to write when I check this complex.,it right i think i know it right now check this is complete
+03-36,0.25,0.25,0.0,Same,Add 4 whites. High. pitch down a bit.,"Add 4 whites, uh. Hi, pitch down a bit.",and 4 whites high push down a bit
+04-01,0.5,1.0,0.5,Worsen,VS Check.,BS Check.,you guys check
+04-02,0.0,0.0,0.0,Same,1000 to go.,1000 to go.,1000 to go
+04-03,0.7272727272727273,0.0,-0.7272727272727273,Improvement,"Busan Tower Singapore 616 Runway in sight, joining downwind runway 18R.","It was on Tower Singapore 616 runway Insight joining downwind runway 1/8, right.",busan tower singapore 616 runway in sight joining downwind runway 18r
+04-04,0.6,0.2,-0.39999999999999997,Improvement,We are clear to land.,We are.,we are clear to learn
+04-05,1.0,1.0,0.0,Same,Alt Hold.,I'll hold.,i ll hold
+04-06,0.5,0.5,0.0,Same,Heading Sel,Heading Cell,heading cell
+04-07,1.0,1.0,0.0,Same,Comfirm.,Confirm.,confirm
+04-08,0.0,0.3333333333333333,0.3333333333333333,Worsen,Route 2 Activated.,Route 2 activated.,root 2 activated
+04-09,2.0,2.5,0.5,Worsen,Direct AB18R,Direct a beam 18 Wright.,derek a beam 18 right
+04-10,0.0,0.6666666666666666,0.6666666666666666,Worsen,6000 feet checked.,6000 feet checked.,6 000 feet checked
+04-11,0.25,0.25,0.0,Same,Speed check. Flaps 30.,Speed check. Flap 30.,speed check flips 30
+04-12,1.0,0.0,-1.0,Improvement,Flaps at 30,Put up set 30.,flaps at 30
+04-13,0.25,0.0,-0.25,Improvement,Roger landing checklist below the line. landing gear.,Roger lending checklist below the line lending gear.,roger landing checklist below the line landing gear
+04-14,2.0,2.0,0.0,Same,Speedbrake.,Speed brake.,speed break
+04-15,2.0,2.0,0.0,Same,Speedbrake.,Speed brake.,speed break
+04-16,0.0,1.0,1.0,Worsen,Flaps.,Flaps.,flips
+04-17,0.0,0.0,0.0,Same,30 green lights Exterior lights are on.,30 green lights Exterior lights are on.,30 green lights exterior lights are on
+04-18,0.6,0.2,-0.39999999999999997,Improvement,Check. Obtain Runway 18R Land.,Check. Runway 18 Ritalin. Land.,check obtain runway 18r
+04-19,0.0,1.0,1.0,Worsen,1000 stabilized.,1000 stabilized.,1 000 stabilized
+04-20,0.0,0.0,0.0,Same,500 feet stabilized.,500 feet stabilized.,500 feet stabilized
+04-21,0.0,1.0,1.0,Worsen,Captain,Captain.,
+04-22,0.0,0.0,0.0,Same,"Roger, I have control.","Roger, I have control.",roger i have control
+04-23,0.0,0.0,0.0,Same,"Roger, I am ready.","Roger, I am ready.",roger i am ready
+04-24,0.0,0.0,0.0,Same,Check VS check.,Check VS check.,check vs check
+04-25,0.45454545454545453,0.0,-0.45454545454545453,Improvement,"Busan Tower Singapore 616 runway in sight, joining downwind runway 18R.",Busan Tower Singapore 616 runway Insight joining downwind runway 1/8 right?,busan tower singapore 616 runway in sight joining downwind runway 18r
+04-26,0.42857142857142855,0.0,-0.42857142857142855,Improvement,Clear to land Runway 18R. Singapore 616.,"Clear to land runway 1/8 right, Singapore 616.",clear to land runway 18r singapore 616
+04-27,0.5,0.5,0.0,Same,Alt Hold.,Out hold.,out hold
+04-28,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+04-29,0.0,0.0,0.0,Same,Route 2 Activated.,Route 2 activated.,route 2 activated
+04-30,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+04-31,0.0,0.0,0.0,Same,6000 feet checked.,6000 feet checked.,6000 feet checked
+04-32,0.5,0.25,-0.25,Improvement,Speed check. Flap 30.,Speed check.,speed check flaps 30
+04-33,0.0,0.0,0.0,Same,A Landing checklist below the line.,A landing checklist below the line.,a landing checklist below the line
+04-34,2.0,2.0,0.0,Same,Speedbrake.,Speed brake.,speed break
+04-35,0.2,0.2,0.0,Same,MCP Speed. Heading Sel. VS.,MCP Speed heading cell VS.,mcp speed heading cell vs
+04-36,0.0,2.0,2.0,Worsen,Flaps.,Flaps.,let s
+04-37,0.125,0.0,-0.125,Improvement,And exterior lights are on. And landing clearance.,And exterior lights are on. And lending clearance.,and exterior lights are on and landing clearance
+04-38,1.0,0.0,-1.0,Improvement,Obtain runway 18R. Landing checklist complete.,Obtain runway 1/8 right lending check is complete.,obtain runway 18r landing checklist complete
+04-39,0.0,0.0,0.0,Same,4 whites,4 whites.,4 whites
+04-40,0.25,0.5,0.25,Worsen,"2 Reds, 2 whites.","Two Reds, 2 whites.",two reds two whites
+04-41,0.0,0.0,0.0,Same,Stabilized.,Stabilized.,stabilized
+04-42,0.75,0.5,-0.25,Improvement,Low speed. Speedbrake up.,"Low speed, uh, speed breaks up.",no speed breaks up
+04-43,0.5,1.25,0.75,Worsen,Reversers normal. Autobrake Disarm.,"Reverse normal. Otterbeck, Disarm.",reverse normal other right this arm
+04-44,0.5,0.0,-0.5,Improvement,60 knots.,60 oughts.,60 knots
+05-01,0.0,0.0,0.0,Same,"Roger, I have control.","Roger, I have control.",roger i have control
+05-02,0.0,0.0,0.0,Same,"Roger, I am ready.","Roger, I am ready.",roger i am ready
+05-03,0.2,0.4,0.2,Worsen,You have control. VS check,You have control of. VS check.,you have control of es check
+05-04,0.0,0.0,0.0,Same,"Roger, Captain.","Roger, Captain.",roger captain
+05-05,0.2,0.0,-0.2,Improvement,Tailwind is pretty strong. 10 knots later during the circling.,Take Witness. Pretty strong. 10 knots later during the circling.,tailwind is pretty strong 10 knots later during the circling
+05-06,0.0,1.3333333333333333,1.3333333333333333,Worsen,1000 to go.,1000 to go.,that ll do it
+05-07,0.5714285714285714,0.42857142857142855,-0.14285714285714285,Improvement,"Busan Tower, Singapore 616. Runway in sight.","Busan Tower, Singapore, 6/16. Runway-insight.",busan tower singapore 616 runway inside join us
+05-08,0.0,0.5,0.5,Worsen,"Say again, Singapore 8616.","Say again, Singapore, 8616.",see you again singapore 8616
+05-09,0.0,0.0,0.0,Same,"Busan Tower, Singapore 616.","Busan Tower, Singapore, 616.",busan tower singapore 616
+05-10,0.7142857142857143,0.0,-0.7142857142857143,Improvement,Visual Runway 18R. Joining downwind Runway 18R,"Visual Runway 1/8, right? Joining downwind. R18 right.",visual runway 18r joining downwind runway 18r
+05-11,1.0,0.75,-0.25,Improvement,Thousand Seven. Alt Hold. ,1007. Alhol.,1007 i ll hold
+05-12,0.0,0.0,0.0,Same,Execute Confirm. Execute. ,"Execute, confirm, execute.",execute confirm execute
+05-13,0.6666666666666666,0.0,-0.6666666666666666,Improvement,Route 2 Activated ,Bluetooth activated.,route 2 activated
+05-14,0.0,0.0,0.0,Same,Execute Confirm?,Execute confirm.,execute confirm
+05-15,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+05-16,0.5,1.5,1.0,Worsen,LNAV Available,Are available.,i ll never available
+05-17,0.0,0.0,0.0,Same,6000 feet check,6000 feet check,6000 feet check
+05-18,0.5,1.0,0.5,Worsen,Flaps 30.,Flights 30.,flap steady
+05-19,0.0,0.0,0.0,Same,VS -700 checked.,VS -700 checked.,vs 700 checked
+05-20,0.0,0.0,0.0,Same,Roger Landing checklist. Altimeters.,Roger Landing checklist. Altimeters.,roger landing checklist altimeters
+05-21,0.0,0.0,0.0,Same,Altimeters.,Altimeters.,altimeters
+05-22,0.6666666666666666,0.16666666666666666,-0.5,Improvement,All below the line. Landing gear.,I'll be loading landing gear.,oh below the line landing gear
+05-23,0.5,0.5,0.0,Same,And down down speedbrakes.,And down down speed brakes.,and down down speed brakes
+05-24,0.0,1.0,1.0,Worsen,Flaps.,Flaps.,flips
+05-25,0.3333333333333333,0.0,-0.3333333333333333,Improvement,30. Green light. ,Dirty green light.,30 green light
+05-26,1.4,0.6,-0.7999999999999999,Improvement,Landing Clearence. Obtain Runway 18R. ,On Lenkira's obtained runway 1 and right.,then clearance obtained runway 18r
+05-27,0.0,0.0,0.0,Same,Check,Check.,check
+05-28,0.0,0.0,0.0,Same,Roger,Roger,roger
+05-29,0.0,0.0,0.0,Same,Altitude 700.,Altitude 700.,altitude 700
+05-30,0.0,0.0,0.0,Same,Target,Target.,target
+05-31,0.0,0.0,0.0,Same,450,450,450
+05-32,0.0,0.25,0.25,Worsen,Different Runway. This is. ,different runway. This is,different runway this is one
+05-33,1.0,0.0,-1.0,Improvement,"Go around, ","Go a round, ",go around
+05-34,0.0,0.0,0.0,Same,Roger I'm Ready.,"Roger, I'm ready.",roger i m ready
+05-35,0.0,0.0,0.0,Same,VS check. You have control.,VS check you have control.,vs check you have control
+05-36,0.0,0.0,0.0,Same,Roger Captain.,Roger Captain.,roger captain
+05-37,0.0,0.0,0.0,Same,1000 to go.,1000 to go.,1000 to go
+05-38,0.2857142857142857,0.2857142857142857,0.0,Same,"Busan Tower, Singapore 616. Runway in sight,",Busan Tower Singapore 616 runway inside.,busan tower singapore 616 runway inside
+05-39,1.0,0.5,-0.5,Improvement,Alt Hold.,Alcohol.,alt halt
+05-40,0.375,0.375,0.0,Same,Heading Sel. Alt Hold. Roger. Activate Route 2.,"Heading South, I'll hold. Roger. Activate Route 2.",heading cell i ll hold roger activate route 2
+05-41,0.0,0.0,0.0,Same,Execute Confirm,Execute confirm.,execute confirm
+05-42,0.6666666666666666,0.6666666666666666,0.0,Same,Route 2 Activated ,roto activated.,rotu activated
+05-43,0.0,0.0,0.0,Same,Roger.,Roger.,roger
+05-44,0.0,0.0,0.0,Same,Execute Confirm.,Execute confirm.,execute confirm
+05-45,0.0,0.0,0.0,Same,6000 checked.,6000 checked.,6000 checked
+05-46,0.5,0.0,-0.5,Improvement,Flaps 30.,Flap 30.,flaps 30
+05-47,0.0,0.0,0.0,Same,Flaps at 30.,Flaps at 30.,flaps at 30
+05-48,0.2857142857142857,0.42857142857142855,0.14285714285714285,Worsen,Landing checklist below the line. Landing gear.,Anicheva is below the line. Landing gear.,and it s below the line landing gear
+05-49,1.0,1.0,0.0,Same,Down speedbreaks.,Down speed brakes.,down speed brakes
+05-50,0.6666666666666666,0.5,-0.16666666666666663,Improvement,VS -700 check. Speedbreaks armed. Flaps.,Yes -700 check. Speedwag's arms flaps.,vs minus 700 check speed brakes armed flaps
+05-51,0.0,0.0,0.0,Same,30. green light. exterior lights On.,30 green light exterior lights On,30 green light exterior lights on
+05-52,0.0,0.0,0.0,Same,Roger.,Roger,roger
+05-53,0.6,0.4,-0.19999999999999996,Improvement,BCTL2 1200. We are high.,Miss TL 2. 1200. We are high.,bctl 2 1200 we are high
+05-54,0.4,0.4,0.0,Same,BCTL3. Target is 950 feet.,BCTL 3. Target is 950 feet.,bctl 3 target is 950 feet
+05-55,0.6666666666666666,0.3333333333333333,-0.3333333333333333,Improvement,1000 feet check.,Pause and check.,100 feet check
+05-56,1.0,0.6666666666666666,-0.33333333333333337,Improvement,BCTL4 700 feet.,BCT of four 700 feet.,bctl 4 700 feet
+05-57,0.14285714285714285,0.7142857142857143,0.5714285714285714,Worsen,Check on profile. 2 whites 2 red.,Check on profile 2 whites to red.,check on profile to what is to read
+05-58,0.0,0.0,0.0,Same,Check. stabilize.,Check. stabilize.,check stabilize
+05-59,0.6666666666666666,0.16666666666666666,-0.5,Improvement,"Speedbrakes not up. OK, speedbreaks up.","Speed brakes not up. OK, speed breaks up.",speedbrakes not up ok speedbrakes up
+05-60,0.8,0.8,0.0,Same,Reversers normal and autobrake disarmed.,Reverse as normal. And auto break.,reverse as normal and auto brake disarmed
+05-61,0.0,0.0,0.0,Same,60 knots.,60 knots.,60 knots
+06-01,0.2,0.0,-0.2,Improvement,"Roger, Cap. I have control.","Roger, I have control.",roger cap i have control
+06-02,0.0,0.0,0.0,Same,"Roger, I am ready.","Roger, I am ready.",roger i am ready
+06-03,0.5,0.0,-0.5,Improvement,VS check,"Yes, check.",vs check
+06-04,0.0,0.0,0.0,Same,"Roger, Captain.","Roger, Captain.",roger captain
+06-05,0.5454545454545454,0.18181818181818182,-0.3636363636363636,Improvement,"Busan Tower, Singapore 616. Runway in sight. Joining downwind runway 18R.",Busan Towers Singapore 616 runway inside joining downwind runway 1/8 right.,busan tower singapore 616 runway inside joining downwind runway 18r
+06-06,0.0,0.0,0.0,Same,Execute Confirm?,Execute confirm,execute confirm
+06-07,0.6666666666666666,0.3333333333333333,-0.3333333333333333,Improvement,Route 2 Activated ,Bluetooth activated.,root 2 activated
+06-08,1.0,0.5,-0.5,Improvement,Roger. Direct to AB18R.,"Roger, direct to beam 1/8 right?",roger direct to beam 18r
+06-09,0.0,0.0,0.0,Same,Execute Confirm?,Execute confirm,execute confirm
+06-10,0.5,0.0,-0.5,Improvement,6000 check,6000 cheque.,6000 check
+06-11,0.5,0.0,-0.5,Improvement,Flaps 30.,Clap 30.,flaps 30
+06-12,0.0,0.6666666666666666,0.6666666666666666,Worsen,Flaps at 30.,Flaps at 30.,flapset 30
+06-13,2.0,0.0,-2.0,Improvement,Speedbrakes.,Speed brakes.,speedbrakes
+06-14,0.0,1.0,1.0,Worsen,Flaps.,Flaps.,flips
+06-15,0.4,0.0,-0.4,Improvement,30. Green light. Exterior lights.,30 green light.,30 green light exterior lights
+06-16,0.6,0.2,-0.39999999999999997,Improvement,"Obtain 18R, Landing Checklist Complete.",Opting one right. Landing checklist complete.,opting 18r landing checklist complete
+06-17,0.0,0.0,0.0,Same,Roger.,Roger.,roger
+06-18,0.375,0.625,0.25,Worsen,Captain. Supposed to fly in autopilot. Cycling FDs.,E captain is supposed to fly in uh. Cycling FDs.,the captain is supposed to fly in a autopilot
+06-19,0.25,0.25,0.0,Same,"Roger, recycling the FDs.",Roger recycling the FTS.,roger recycling the fts
+06-20,0.0,0.0,0.0,Same,"OK, Ok, Roger, Roger. I have control.","OK, Ok, Roger, Roger. I have control.",ok ok roger roger i have control
+06-21,0.0,0.5,0.5,Worsen,"Roger, I am ready.","Roger, I am ready.",roger that i m ready
+06-22,0.0,0.0,0.0,Same,VS check.,VS check.,vs check
+06-23,0.0,0.0,0.0,Same,Roger Captain.,Roger Captain.,roger captain
+06-24,0.5454545454545454,0.18181818181818182,-0.3636363636363636,Improvement,"Busan Tower, Singapore 616. Runway in sight. Joining downwind runway 18R.",Buzzan Tower Singapore 616 surround way inside joining downwind runway 18 right?,busan tower singapore 616 runway insight joining downwind runway 18r
+06-25,1.1666666666666667,0.16666666666666666,-1.0,Improvement,cleared to join downwind runway 18R.,cleared to join. Don't win? Runaway. Want it right?,to join downwind runway 18r
+06-26,1.0,1.5,0.5,Worsen,Alt Hold.,OK.,okay out pull
+06-27,0.5,1.0,0.5,Worsen,Heading Sel.,Heading SO.,eating show
+06-28,0.0,0.0,0.0,Same,Roger. Activate Route 2.,"Roger, activate Route 2.",roger activate route 2
+06-29,0.0,0.0,0.0,Same,Execute confirm?,Execute confirm.,execute confirm
+06-30,0.5,0.5,0.0,Same,OK. Route 2 Activated. LNAV available.,Key route to activated LNEF available.,ok roto activated lnf available
+06-31,0.0,0.0,0.0,Same,Roger,Roger,roger
+06-32,1.5,0.5,-1.0,Improvement,Roger Direct to AB18R.,Direct Roger direct to a beam. Want it right?,roger direct to beam 18r
+06-33,0.5,0.0,-0.5,Improvement,Execute Confirm?,Executive confirm.,execute confirm
+06-34,2.5,2.5,0.0,Same,Direct AB18R.,Direct a beam. Want it right?,direct up you want it right
+06-35,0.0,0.0,0.0,Same,6000 feet check.,6000 feet. Check.,6000 feet check
+06-36,1.0,1.5,0.5,Worsen,Flaps 30. ,,let s study
+06-37,0.6666666666666666,0.0,-0.6666666666666666,Improvement,Flaps at 30.,Flaps.,flaps at 30
+06-38,1.0,1.0,0.0,Same,Landing Gear. Speedbrakes.,Linda Gear. Speed bricks.,end gear speed brakes
+06-39,1.0,1.0,0.0,Same,Flaps,Flips.,flips
+06-40,0.8,1.0,0.19999999999999996,Worsen,30. Green Lights. Exterior Lights.,Are you going to exterior lights?,that is green light x ray lights
+06-41,1.2857142857142858,1.7142857142857142,0.4285714285714284,Worsen,OK. Obtain Runway 18R. Landing checklist complete.,On OK obtain right one way right then each right is complete.,if i ve been wrong we want it right then it is complete
+06-42,0.0,2.0,2.0,Worsen,Roger,Roger.,oh jeez
+06-43,7.0,2.0,-5.0,Improvement,LNAV,"I'll tell you, I'll never.",help me
+06-44,0.6666666666666666,1.6666666666666667,1.0,Worsen,Confirm. Recycle FDs.,Confirm recycled.,confirm you re secure after this
+06-45,0.25,0.5,0.25,Worsen,Roger. Cycling the FDs.,"Hey Roger, cycling the FDS.",hey roger is cycling the fds
+06-46,0.25,0.25,0.0,Same,Cap. We are high.,"OK, Cap, we are high.",tip we are high
+06-47,1.0,0.5,-0.5,Improvement,4 Whites.,For heights. ,for whites
+06-48,0.42857142857142855,0.0,-0.42857142857142855,Improvement,Check. Captain we are high. Go around.,check. Captain will Hi go around.,check captain we are high go around
+07-01,0.0,0.0,0.0,Same,"Roger, Captain. Flaps 30. Execute. Confirm."," Roger, Captain Flaps 30. Execute. Confirm.",roger captain flaps 30 execute confirm
+07-02,0.0,0.0,0.0,Same,"Roger, I have control.","Roger, I have control.",roger i have control
+07-03,0.0,0.0,0.0,Same,"Roger, I am ready.","Roger, I am ready.",roger i am ready
+07-04,0.0,0.0,0.0,Same,VS check.,VS check.,vs check
+07-05,0.16666666666666666,0.16666666666666666,0.0,Same,I am on route 2 LEGS.,I am on route 2 lakes.,i am on route 2 lakes
+07-06,0.0,0.0,0.0,Same,I am with you on Route 2 LEGS.,I am with you on Route 2 legs.,i am with you on route 2 legs
+07-07,0.0,0.0,0.0,Same,"Captain, would you like Control?","Captain, would you like Control?",captain would you like control
+07-08,0.14285714285714285,0.0,-0.14285714285714285,Improvement,"Busan Tower, Singapore 616 runway in sight.","Busan Tower, Singapore 616 runway in site.",busan tower singapore 616 runway in sight
+07-09,0.7142857142857143,0.14285714285714285,-0.5714285714285714,Improvement,Clear to land runway 18R. Singapore 616.,Singapore 616.,cleared to land runway 18r singapore 616
+07-10,1.0,0.5,-0.5,Improvement,Alt Hold. ,Outhold.,out hold
+07-11,0.25,0.25,0.0,Same,Heading Sel. Route 2.,Heading Cell. Route 2.,heading cell route 2
+07-12,0.0,0.0,0.0,Same,Route 2 activated.,Route 2 activated.,route 2 activated
+07-13,1.0,0.5,-0.5,Improvement,Roger. Direct to AB18R.,"Roger direct to EBIM 1/8, right?",roger direct to abim 18r
+07-14,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+07-15,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+07-16,0.0,0.0,0.0,Same,6000 is checked.,6000 is checked.,6000 is checked
+07-17,0.5,0.0,-0.5,Improvement,Speed Check. Flaps 30. ,Speak. Check. Flaps dirty.,speed check flaps 30
+07-18,0.0,0.0,0.0,Same,Flaps at 30.,Flaps at 30.,flaps at 30
+07-19,0.5714285714285714,0.2857142857142857,-0.2857142857142857,Improvement,Landing checklist below the line. Landing Gear.,The ending checklist below the line.,tending checklist below the line blending gear
+07-20,1.0,1.0,0.0,Same,Down. Speedbrake.,Down speed brake.,down speed brake
+07-21,0.25,0.0,-0.25,Improvement,Check. 30. Green Light.,Check dirty green light.,check 30 green light
+07-22,0.0,0.0,0.0,Same,Landing Clearance.,Landing clearance.,landing clearance
+07-23,0.5,0.0,-0.5,Improvement,Check. Roger.,"Jack, Roger.",check roger
+07-24,0.0,1.0,1.0,Worsen,FDs recycled.,FDS Recycled.,fd is recycled
+07-25,0.2857142857142857,0.42857142857142855,0.14285714285714285,Worsen,"2 Reds, 2 Whites on the PAPI.","Two Reds, 2 whites on the puppy.",two reds two whites on the puppy
+07-26,0.0,0.0,0.0,Same,Stabilized. Standby. Disregard. Sorry.,Stabilized. Standby. Disregard. Sorry.,stabilized standby disregard sorry
+07-27,0.125,0.25,0.125,Worsen,"Two Reds, 2 whites on the PAPI, Sir.","Two Reds, 2 whites on the puppy, Sir.",two reds two whites on the puppy sir
+07-28,0.0,0.0,0.0,Same,Stabilized.,Stabilized.,stabilized
+07-29,0.0,0.0,0.0,Same,"Roger, I have control.","Roger, I have control.",roger i have control
+07-30,0.0,0.0,0.0,Same,"Roger, I am ready.","Roger, I am ready.",roger i am ready
+07-31,0.0,0.0,0.0,Same,VS check.,VS check.,vs check
+07-32,0.3333333333333333,0.3333333333333333,0.0,Same,Route 2 LEGS.,Route 2 lakes.,route 2 links
+07-33,0.5454545454545454,0.18181818181818182,-0.3636363636363636,Improvement,Busan Tower Singapore 616 runway in sight. Joining downwind runway 18R.,Busan Tower Singapore 616 runway inside Jordan downwind runway 1/8 right.,busan tower singapore 616 runway inside joining downwind runway 18r
+07-34,1.0,0.14285714285714285,-0.8571428571428572,Improvement,Clear to land runway 18R. Singapore 616.,"Cleared land runway 1/8, right. Singapore 6/16.",cleared to land runway 18r singapore 616
+07-35,1.0,0.75,-0.25,Improvement,Heading Sel. Alt Hold. ,Betting sell out whole.,heading cell outhaul
+07-36,0.0,0.0,0.0,Same,Activating Route 2,Activating Route 2.,activating route 2
+07-37,0.0,1.0,1.0,Worsen,Confirm.,Confirm.,confirm confirm
+07-38,0.0,0.0,0.0,Same,Execute.,Execute.,execute
+07-39,0.0,0.6666666666666666,0.6666666666666666,Worsen,Route 2 activated.,Route 2 activated.,root to activated
+07-40,0.6666666666666666,1.3333333333333333,0.6666666666666666,Worsen,Direct to AB18R.,Direct to a beam.,direct to a beam 1a ride
+07-41,0.0,0.0,0.0,Same,Confirm.,Confirm.,confirm
+07-42,2.5,2.0,-0.5,Improvement,Direct AB18R.,Direct a beam 1/8 right.,direct a beam 18 right
+07-43,0.0,0.0,0.0,Same,Check.,Check.,check
+07-44,0.0,0.0,0.0,Same,Flaps 30.,Flaps 30.,flaps 30
+07-45,0.5,0.5,0.0,Same,Cap. LNAV is available.,Caplanv is available.,caplnav is available
+07-46,1.0,0.7142857142857143,-0.2857142857142857,Improvement,Landing checklist below the line. Landing Gear.,I didn't check this build align landing gear.,i didn t check this below the line landing gear
+07-47,0.5,1.0,0.5,Worsen,Down. Speedbrakes.,Down speed.,down speed brakes
+07-48,0.0,0.0,0.0,Same,Flaps.,Flaps.,flaps
+07-49,0.0,0.0,0.0,Same,VS 700 is checked.,VS 700 is checked.,vs 700 is checked
+07-50,0.3333333333333333,0.0,-0.3333333333333333,Improvement,On. Landing clearance.,On. Lending clearance.,on landing clearance
+07-51,0.0,0.0,0.0,Same,Flight directors.,Flight directors.,flight directors
+07-52,0.0,0.0,0.0,Same,Cycling FDs.,Cycling FDS.,cycling fds
+07-53,0.09090909090909091,0.18181818181818182,0.09090909090909091,Worsen,4 whites on the PAPI. You are a bit high Captain.,4 whites on the puppy. You are a bit high captain.,4 whites on the puppy you re a bit high captain
+07-54,0.2857142857142857,0.8571428571428571,0.5714285714285714,Worsen,2 Reds 2 Whites on the PAPI. ,"Two Reds, 2 whites on the puppy",two reds two whites on the puppy you re on
+07-55,0.0,0.0,0.0,Same,Stabilized.,Stabilized.,stabilized
+07-56,0.8,0.8,0.0,Same,Speedbrake up and reversers normal.,Speak back up and reverse as normal.,speak back up and reverse as normal
+07-57,2.5,2.5,0.0,Same,Autobrake disarmed.,How to break this arm?,how to break this arm
+07-58,0.0,0.0,0.0,Same,60 knots.,60 knots.,60 knots

@@ -1,0 +1,4 @@
+comparison,category,ref_count,prev_error_count,next_error_count,error_reduction,prev_error_rate,next_error_rate,relative_error_reduction
+Azure_to_LoRA,all_terms,1053,347,199,148,0.3295346628679962,0.1889838556505223,0.4265129682997118
+Azure_to_LoRA,aviation_terms,535,185,84,101,0.34579439252336447,0.15700934579439252,0.5459459459459459
+Azure_to_LoRA,non_aviation_terms,518,162,115,47,0.3127413127413127,0.222007722007722,0.29012345679012347

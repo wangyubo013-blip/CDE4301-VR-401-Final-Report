@@ -1,0 +1,4 @@
+comparison,category,ref_count,prev_error_count,next_error_count,error_reduction,prev_error_rate,next_error_rate,relative_error_reduction
+Prompt_stage,all_terms,1053,199,161,38,0.1889838556505223,0.15289648622981955,0.19095477386934673
+Prompt_stage,aviation_terms,535,84,79,5,0.15700934579439252,0.14766355140186915,0.05952380952380952
+Prompt_stage,non_aviation_terms,518,115,82,33,0.222007722007722,0.1583011583011583,0.28695652173913044

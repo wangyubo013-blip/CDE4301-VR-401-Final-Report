@@ -1,0 +1,4 @@
+comparison,category,ref_count,prev_error_count,next_error_count,error_reduction,prev_error_rate,next_error_rate,relative_error_reduction
+Azure_to_Final,all_terms,1053,347,161,186,0.3295346628679962,0.15289648622981955,0.5360230547550432
+Azure_to_Final,aviation_terms,535,185,79,106,0.34579439252336447,0.14766355140186915,0.572972972972973
+Azure_to_Final,non_aviation_terms,518,162,82,80,0.3127413127413127,0.1583011583011583,0.49382716049382713
