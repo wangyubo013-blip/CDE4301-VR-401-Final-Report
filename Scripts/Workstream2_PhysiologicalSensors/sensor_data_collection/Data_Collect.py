@@ -2,7 +2,7 @@ import serial
 import csv
 from datetime import datetime, timezone, timedelta
 
-PORT = 'COM11'      # 改成你的串口
+PORT = 'COM11'      # change to your port
 BAUD = 9600
 
 beijing_tz = timezone(timedelta(hours=8))
@@ -36,7 +36,7 @@ with open(filename, mode='w', newline='', encoding='utf-8-sig') as file:
 
                     if hr is not None and gsr is not None:
                         timestamp = datetime.now(beijing_tz).strftime('%Y-%m-%d %H:%M:%S')
-                        writer.writerow([f"'{timestamp}", hr, gsr])   # 前面加 ' ，让 Excel 按文本保存
+                        writer.writerow([f"'{timestamp}", hr, gsr])
                         file.flush()
                         print(timestamp, hr, gsr)
 
