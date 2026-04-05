@@ -1,5 +1,5 @@
 # CDE4301-VR-401-Final-Report
-This repository contains the project website for the CDE4301 Final Report.
+This repository contains the project website for the CDE4301 VR401 Final Report.
 
 **Team Members** 
 - Liu Yuhui (Ula) 		(A0266685L)
@@ -28,13 +28,19 @@ The complete final report is published here: [https://wangyubo013-blip.github.io
 ├── README.md                               # This file
 └── index.html                              # Main webpage
 ```
-All figures referenced in *index.md* are stored in `assets/images/`.
+All figures referenced in *index.html* are stored in `assets/images/`.
 
 ## Supplementary Materials
 
 In addition to the website version of the report, the repository includes:
 
+Workstream 1:
+1. Fine-tuned model
+2. Data Preparation Pipeline
+3. Test Results
 
+Workstream 2:
+1. 
 
 ## Notes for Reviewers
 
