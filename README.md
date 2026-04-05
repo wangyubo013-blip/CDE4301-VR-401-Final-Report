@@ -56,7 +56,7 @@ Workstream 2:
 2. Raw physiological data of subjects
 3. Sensor data collection tools
 4. Data cleaning pipeline
-5. Real-world and VR training data
+5. Real-world VR training data
 
 ## Notes for Reviewers
 
