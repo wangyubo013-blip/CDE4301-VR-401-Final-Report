@@ -36,11 +36,7 @@ All figures referenced in *index.md* are stored in `assets/images/`.
 
 In addition to the website version of the report, the repository includes:
 
-- **ganttchart.pdf** – Project schedule submitted for the interim review  
-- **Python scripts** (`Preprocess.py`, `PreprocessDedicated.py`) used during data preprocessing and log alignment
-- **samples** (`SampleA_LRL.xlsx`, `SampleB_LRR.xlsx`, `SampleC.xlsx`,) – samples mentioned in Report
 
-These files support the methodology described in the report and are provided as part of the submission package.
 
 ## Notes for Reviewers
 
