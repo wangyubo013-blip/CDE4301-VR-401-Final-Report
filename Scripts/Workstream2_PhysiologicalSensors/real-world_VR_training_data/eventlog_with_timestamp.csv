@@ -1,0 +1,790 @@
+Timestamp,Event_Time,Event,Content
+15:25:20,56.8528,EVENTCODE,LATERAL_ERROR
+15:25:20,56.8528,EVENTCODE,WRONG_RUNWAY
+15:25:20,56.8528,EVENTCODE,PAPI_18R_OFF
+15:25:20,56.8528,EyeGaze,left_enter_PFD speed
+15:25:20,56.8528,EyeGaze,right_enter_PFD speed
+15:25:20,56.8528,EVENTCODE,SET_ALT_HOLD
+15:25:22,58.8551,BUTTONID,FLAPS_AT_15
+15:25:22,59.5369,EyeGaze,right_exit_Window middle
+15:25:23,60.3742,EVENTCODE,VARY_SPEED
+15:25:23,60.6823,EyeGaze,right_enter_FMC
+15:25:24,61.4452,EyeGaze,left_exit_ND right
+15:25:24,61.6553,EyeGaze,left_enter_Flaps
+15:25:27,64.4088,EyeGaze,right_exit_ND right
+15:25:27,64.4253,EyeGaze,right_enter_Window middle
+15:25:27,64.5793,EyeGaze,right_exit_Window middle
+15:25:27,64.6205,EyeGaze,right_enter_Window middle
+15:25:28,65.3034,EVENTCODE,VARY_SPEED
+15:25:30,66.7945,BUTTONID,START_SCENARIO
+15:25:30,67.3772,EyeGaze,right_exit_Window middle
+15:25:30,67.5723,EyeGaze,right_enter_Window middle
+15:25:31,68.5903,EyeGaze,right_exit_PFD speed
+15:25:31,68.6471,EyeGaze,right_enter_ND right
+15:25:31,68.6883,EyeGaze,right_exit_ND right
+15:25:31,68.7436,EyeGaze,right_enter_ND right
+15:25:31,68.759,EyeGaze,right_exit_ND right
+15:25:32,68.826,EyeGaze,right_enter_Window middle
+15:25:33,69.8842,EVENTCODE,VARY_SPEED
+15:25:33,70.6339,EVENTCODE,MAIN_AUDIO_END
+15:25:35,71.8876,SPEECH,
+15:25:37,73.8227,SPEECH,"Roger,I have control."
+15:25:37,73.8393,EVENTCODE,PLAYER_RESPONSE_PASS
+15:25:37,73.8654,EVENTCODE,PF_ACTION_FMC_ROUTE_1
+15:25:37,74.3781,BUTTONID,DEPARR
+15:25:37,74.4649,EVENTCODE,VARY_SPEED
+15:25:37,74.5608,EyeGaze,left_exit_PFD altitude
+15:25:37,74.5888,EyeGaze,left_enter_ND right
+15:25:38,74.8803,BUTTONID,2R
+15:25:38,75.3817,BUTTONID,3R
+15:25:39,75.8835,BUTTONID,6R
+15:25:39,76.3852,BUTTONID,EXEC
+15:25:40,76.8995,BUTTONID,EXEC
+15:25:40,77.3714,EVENTCODE,MAIN_AUDIO_END
+15:25:40,77.4014,BUTTONID,LEGS
+15:25:41,77.9018,BUTTONID,NEXTPAGE
+15:25:41,78.1424,SPEECH,For Group 1.
+15:25:41,78.4042,BUTTONID,NEXTPAGE
+15:25:41,78.7514,EyeGaze,right_exit_ND right
+15:25:41,78.7777,EyeGaze,right_enter_PFD altitude
+15:25:42,78.9187,BUTTONID,1L
+15:25:42,79.0994,EVENTCODE,VARY_SPEED
+15:25:42,79.3494,EyeGaze,right_exit_ND right
+15:25:42,79.4222,BUTTONID,LEGS
+15:25:43,79.9342,BUTTONID,1L
+15:25:43,80.4215,EyeGaze,right_enter_FMC
+15:25:43,80.4347,BUTTONID,EXEC
+15:25:43,80.4347,EVENTCODE,PF_ACTION_COMPLETE
+15:25:43,80.4636,EVENTCODE,FMC_Route1_Complete
+15:25:43,80.4765,EVENTCODE,PF_ACTION_FMC_ROUTE_2
+15:25:44,80.9779,BUTTONID,RTE
+15:25:44,81.4932,BUTTONID,PREVPAGE
+15:25:45,81.9945,BUTTONID,5R
+15:25:45,82.5097,BUTTONID,DEPARR
+15:25:45,82.6923,EVENTCODE,VARY_SPEED
+15:25:46,83.0122,BUTTONID,4R
+15:25:46,83.5129,BUTTONID,5R
+15:25:47,84.0161,BUTTONID,2R
+15:25:47,84.485,EVENTCODE,MAIN_AUDIO_END
+15:25:47,84.5282,BUTTONID,6R
+15:25:48,85.0441,BUTTONID,LEGS
+15:25:48,85.0441,EVENTCODE,PF_ACTION_COMPLETE
+15:25:48,85.0707,EVENTCODE,FMC_Route2_Complete
+15:25:48,85.0846,EVENTCODE,LOCK_FMC
+15:25:49,86.1582,EyeGaze,left_exit_PFD altitude
+15:25:49,86.1881,EyeGaze,left_enter_Window middle
+15:25:49,86.7164,EVENTCODE,MAIN_AUDIO_END
+15:25:49,86.757,EyeGaze,right_exit_PFD altitude
+15:25:49,86.7707,EyeGaze,right_enter_PFD altitude
+15:25:50,87.4128,EVENTCODE,VARY_SPEED
+15:25:52,88.8304,EyeGaze,right_exit_PFD altitude
+15:25:52,89.6254,SPEECH,"Roger, I am ready."
+15:25:52,89.6401,EVENTCODE,PLAYER_RESPONSE_PASS
+15:25:52,89.6544,EVENTCODE,FMC_Prep_Complete
+15:25:53,90.2905,EyeGaze,right_enter_PFD altitude
+15:25:53,90.3901,EyeGaze,left_exit_ND right
+15:25:54,91.2229,EyeGaze,left_enter_FMC
+15:25:54,91.683,EyeGaze,right_exit_ND right
+15:25:54,91.7267,EyeGaze,right_enter_Window middle
+15:25:55,92.3524,EVENTCODE,VARY_SPEED
+15:25:58,95.24,WAYPOINT,NOORI
+15:25:58,95.2821,BUTTONID,ALTITUDE_1700
+15:25:58,95.2821,EVENTCODE,PF_ACTION_ZIKKO_ALT
+15:25:58,95.4298,EyeGaze,right_exit_PFD speed
+15:25:58,95.447,EyeGaze,right_enter_FMC
+15:25:58,95.71,EVENTCODE,VARY_SPEED
+15:25:59,96.3351,BUTTONID,VERTSPEED_-1000
+15:25:59,96.3351,EVENTCODE,PF_ACTION_RNP_VS
+15:26:01,97.991,EyeGaze,left_exit_ND right
+15:26:01,98.1465,EyeGaze,left_enter_MCP
+15:26:02,99.0238,EVENTCODE,VARY_SPEED
+15:26:02,99.5661,EyeGaze,left_exit_Window middle
+15:26:02,99.5949,EyeGaze,left_enter_MCP
+15:26:03,99.8885,EVENTCODE,MAIN_AUDIO_END
+15:26:03,100.1101,EyeGaze,right_exit_MCP
+15:26:03,100.1248,EyeGaze,right_enter_Window middle
+15:26:03,100.5686,EyeGaze,right_exit_ND left
+15:26:04,101.586,SPEECH,VS check.
+15:26:04,101.598,EVENTCODE,PLAYER_RESPONSE_PASS
+15:26:05,102.6008,EyeGaze,right_enter_PFD speed
+15:26:05,102.6143,EyeGaze,right_exit_PFD speed
+15:26:05,102.6555,EyeGaze,right_enter_FMC
+15:26:06,103.7274,EVENTCODE,VARY_SPEED
+15:26:07,104.1874,EyeGaze,right_exit_FMC
+15:26:07,104.2854,EyeGaze,right_enter_FMC
+15:26:07,104.4929,EyeGaze,right_exit_FMC
+15:26:07,104.5088,EVENTCODE,MAIN_AUDIO_END
+15:26:07,104.5354,EVENTCODE,UNLOCK_BUTTON_6L
+15:26:07,104.7586,EyeGaze,right_enter_FMC
+15:26:09,106.0402,BUTTONID,6L
+15:26:09,106.0792,EVENTCODE,LOCK_FMC
+15:26:09,106.0981,EVENTCODE,FMC_RNPApproach_Complete
+15:26:11,108.2528,EyeGaze,right_exit_FMC
+15:26:11,108.2798,EVENTCODE,VARY_SPEED
+15:26:11,108.2953,EyeGaze,right_enter_PFD speed
+15:26:11,108.4182,EyeGaze,left_exit_PFD altitude
+15:26:12,108.8234,EyeGaze,left_enter_PFD speed
+15:26:12,108.8497,EyeGaze,right_exit_PFD speed
+15:26:12,108.8645,EyeGaze,right_enter_ND right
+15:26:16,113.1104,EVENTCODE,VARY_SPEED
+15:26:17,114.3487,EyeGaze,right_exit_FMC
+15:26:17,114.364,EyeGaze,right_enter_PFD speed
+15:26:19,116.4378,EVENTCODE,VARY_SPEED
+15:26:23,119.8064,EVENTCODE,VARY_SPEED
+15:26:24,121.5748,SPEECH,
+15:26:24,121.6576,EyeGaze,right_exit_PFD speed
+15:26:25,122.159,EyeGaze,right_enter_PFD speed
+15:26:25,122.5904,EyeGaze,right_exit_PFD speed
+15:26:25,122.6331,EyeGaze,right_enter_ND right
+15:26:26,123.4963,EVENTCODE,VARY_SPEED
+15:26:28,125.7375,EyeGaze,right_exit_PFD speed
+15:26:30,126.9483,EyeGaze,right_enter_PFD speed
+15:26:30,127.1585,EyeGaze,right_exit_PFD speed
+15:26:30,127.2966,EVENTCODE,VARY_SPEED
+15:26:30,127.4221,EyeGaze,left_exit_ND right
+15:26:30,127.4221,EyeGaze,right_enter_PFD speed
+15:26:33,129.8313,EyeGaze,left_enter_ND right
+15:26:33,130.7782,EVENTCODE,VARY_SPEED
+15:26:35,132.5176,EyeGaze,left_exit_PFD speed
+15:26:35,132.5748,EyeGaze,left_enter_ND right
+15:26:35,132.5748,EyeGaze,right_exit_PFD speed
+15:26:35,132.756,EyeGaze,right_enter_ND right
+15:26:35,132.7842,EyeGaze,right_exit_ND right
+15:26:36,132.9501,EyeGaze,left_exit_ND right
+15:26:36,132.9501,EyeGaze,right_enter_PFD speed
+15:26:36,133.1594,EyeGaze,left_enter_PFD speed
+15:26:38,135.1194,EVENTCODE,VARY_SPEED
+15:26:39,136.5535,EyeGaze,left_exit_Window middle
+15:26:39,136.5677,EyeGaze,left_enter_Window middle
+15:26:39,136.5846,SPEECH,
+15:26:43,139.8788,EVENTCODE,VARY_SPEED
+15:26:46,143.0811,EyeGaze,left_exit_Window middle
+15:26:46,143.7485,EyeGaze,left_enter_ND right
+15:26:46,143.7485,EyeGaze,right_exit_Window middle
+15:26:47,144.0151,EyeGaze,right_enter_PFD speed
+15:26:47,144.1958,EVENTCODE,VARY_SPEED
+15:26:47,144.5014,EyeGaze,left_exit_PFD speed
+15:26:47,144.5286,EyeGaze,left_enter_PFD altitude
+15:26:50,147.3009,EVENTCODE,VARY_SPEED
+15:26:54,151.5064,EVENTCODE,VARY_SPEED
+15:26:54,151.5884,SPEECH,
+15:26:59,155.987,EVENTCODE,VARY_SPEED
+15:27:00,157.559,EyeGaze,right_exit_PFD altitude
+15:27:01,157.823,EyeGaze,right_enter_PFD altitude
+15:27:02,159.7738,EVENTCODE,VARY_SPEED
+15:27:04,161.78,WAYPOINT,PK731
+15:27:05,162.0419,EyeGaze,right_exit_Window middle
+15:27:05,162.1948,EyeGaze,right_enter_Window middle
+15:27:06,162.9054,EyeGaze,right_exit_Window middle
+15:27:06,163.1849,EyeGaze,right_enter_Exterior light
+15:27:06,163.2379,EyeGaze,right_exit_Exterior light
+15:27:06,163.2524,EyeGaze,right_enter_Exterior light
+15:27:06,163.3678,EVENTCODE,VARY_SPEED
+15:27:06,163.4185,EyeGaze,right_exit_Exterior light
+15:27:07,163.8664,EyeGaze,right_enter_Exterior light
+15:27:09,166.5802,SPEECH,
+15:27:10,166.9948,EyeGaze,left_exit_ND left
+15:27:10,167.0091,EyeGaze,left_enter_Window middle
+15:27:11,167.8466,EyeGaze,right_exit_ND right
+15:27:11,167.9725,EyeGaze,right_enter_FMC
+15:27:11,168.2651,EVENTCODE,VARY_SPEED
+15:27:15,172.2052,EVENTCODE,VARY_SPEED
+15:27:18,175.5891,EVENTCODE,VARY_SPEED
+15:27:19,175.9767,EyeGaze,right_exit_PFD altitude
+15:27:19,176.2989,EyeGaze,right_enter_PFD altitude
+15:27:19,176.7014,EyeGaze,right_exit_PFD speed
+15:27:19,176.7153,EyeGaze,right_enter_ND right
+15:27:20,177.7043,EyeGaze,right_exit_PFD speed
+15:27:23,179.9618,EyeGaze,right_enter_Window middle
+15:27:23,179.974,EVENTCODE,VARY_SPEED
+15:27:24,181.5777,SPEECH,
+15:27:27,183.8173,EVENTCODE,VARY_SPEED
+15:27:28,185.1379,EyeGaze,left_exit_FMC
+15:27:29,186.2639,EyeGaze,left_enter_Flaps
+15:27:30,186.8891,EyeGaze,right_exit_Flaps
+15:27:30,186.9018,EyeGaze,right_enter_Flaps
+15:27:30,186.9188,EyeGaze,right_exit_Flaps
+15:27:30,186.9307,EyeGaze,right_enter_Flaps
+15:27:30,187.0691,EVENTCODE,VARY_SPEED
+15:27:32,189.0777,EyeGaze,left_exit_Flaps
+15:27:32,189.0896,EyeGaze,left_enter_FMC
+15:27:32,189.16,EyeGaze,left_exit_FMC
+15:27:32,189.1867,EyeGaze,left_enter_PFD speed
+15:27:33,190.0655,EyeGaze,right_exit_Flaps
+15:27:33,190.0911,EyeGaze,right_enter_FMC
+15:27:33,190.2023,EyeGaze,right_exit_PFD altitude
+15:27:33,190.6215,EVENTCODE,VARY_SPEED
+15:27:33,190.6921,EyeGaze,right_enter_PFD altitude
+15:27:33,190.7602,EyeGaze,right_exit_PFD speed
+15:27:34,190.8017,EyeGaze,right_enter_FMC
+15:27:35,192.7358,EyeGaze,right_exit_FMC
+15:27:36,193.0716,EyeGaze,right_enter_ND right
+15:27:37,194.327,EVENTCODE,VARY_SPEED
+15:27:39,196.7602,SPEECH,
+15:27:41,198.155,EVENTCODE,VARY_SPEED
+15:27:44,201.3115,EVENTCODE,VARY_SPEED
+15:27:48,204.807,EyeGaze,right_exit_ND right
+15:27:48,205.0047,EyeGaze,right_enter_ND right
+15:27:48,205.0297,EVENTCODE,VARY_SPEED
+15:27:48,205.3087,EyeGaze,right_exit_ND right
+15:27:48,205.419,EyeGaze,right_enter_ND right
+15:27:48,205.516,EyeGaze,right_exit_ND right
+15:27:48,205.5881,EyeGaze,right_enter_ND right
+15:27:48,205.7401,EyeGaze,right_exit_ND right
+15:27:49,205.9054,EyeGaze,right_enter_ND right
+15:27:49,205.9283,EyeGaze,right_exit_ND right
+15:27:49,206.0468,EyeGaze,right_enter_ND right
+15:27:49,206.1004,EyeGaze,right_exit_ND right
+15:27:52,209.0659,EVENTCODE,VARY_SPEED
+15:27:53,210.0412,EyeGaze,right_enter_PFD speed
+15:27:54,211.5717,SPEECH,
+15:27:56,213.0205,EVENTCODE,VARY_SPEED
+15:27:57,213.8009,EyeGaze,right_exit_PFD altitude
+15:27:57,213.8141,EyeGaze,right_enter_PFD speed
+15:27:58,214.9005,EyeGaze,right_exit_PFD speed
+15:27:58,214.9261,EyeGaze,right_enter_ND right
+15:28:00,217.1428,EVENTCODE,VARY_SPEED
+15:28:03,220.62,WAYPOINT,WAYBI
+15:28:04,221.7656,EyeGaze,right_exit_PFD speed
+15:28:05,221.8182,EyeGaze,right_enter_ND right
+15:28:05,221.8479,EVENTCODE,VARY_SPEED
+15:28:08,225.0393,EVENTCODE,MAIN_AUDIO_END
+15:28:08,225.0521,EVENTCODE,VARY_SPEED
+15:28:09,226.5693,SPEECH,
+15:28:10,226.8326,EyeGaze,left_exit_Window right
+15:28:10,226.9444,EyeGaze,left_enter_Window right
+15:28:10,227.0276,EyeGaze,left_exit_Window right
+15:28:10,227.0691,EyeGaze,left_enter_Window right
+15:28:10,227.1,EyeGaze,left_exit_Window right
+15:28:12,228.9088,EVENTCODE,VARY_SPEED
+15:28:12,229.34,EyeGaze,left_enter_Window right
+15:28:12,229.3687,EyeGaze,left_exit_Window right
+15:28:12,229.3834,EyeGaze,left_enter_Window right
+15:28:12,229.3959,EyeGaze,left_exit_Window right
+15:28:12,229.41,EyeGaze,left_enter_Window right
+15:28:12,229.4644,EyeGaze,left_exit_Window right
+15:28:12,229.4781,EyeGaze,left_enter_Window right
+15:28:12,229.4942,EyeGaze,left_exit_Window right
+15:28:12,229.5087,EyeGaze,left_enter_Window right
+15:28:12,229.6873,EyeGaze,left_exit_Window right
+15:28:13,230.0082,EyeGaze,left_enter_Window right
+15:28:13,230.2986,EyeGaze,left_exit_Window right
+15:28:14,231.0499,SPEECH,Busan Tower Singapore 616 runway and.
+15:28:14,231.0646,EVENTCODE,PLAYER_RESPONSE_PASS
+15:28:15,232.205,EVENTCODE,VARY_SPEED
+15:28:15,232.4265,SPEECH,Site joining down wing.
+15:28:16,233.027,EyeGaze,left_enter_PFD altitude
+15:28:16,233.027,EyeGaze,right_exit_Window right
+15:28:16,233.7632,EyeGaze,right_enter_Window middle
+15:28:19,236.089,EVENTCODE,VARY_SPEED
+15:28:20,236.9358,EyeGaze,left_exit_ND right
+15:28:20,236.9779,EyeGaze,left_enter_PFD altitude
+15:28:20,237.5217,EyeGaze,left_exit_PFD altitude
+15:28:20,237.5771,EyeGaze,left_enter_Window right
+15:28:20,237.6883,EyeGaze,left_exit_Window right
+15:28:21,237.7994,EyeGaze,left_enter_Window right
+15:28:23,239.9194,EVENTCODE,MAIN_AUDIO_END
+15:28:23,240.196,EyeGaze,right_exit_PFD speed
+15:28:23,240.3653,EVENTCODE,VARY_SPEED
+15:28:25,241.8683,EyeGaze,right_enter_Window middle
+15:28:28,244.9971,EyeGaze,right_exit_ND right
+15:28:28,245.0809,EVENTCODE,VARY_SPEED
+15:28:28,245.1664,EyeGaze,right_enter_PFD altitude
+15:28:28,245.192,EyeGaze,right_exit_PFD altitude
+15:28:29,245.9594,EyeGaze,right_enter_Window middle
+15:28:30,247.1023,EyeGaze,right_exit_ND right
+15:28:30,247.1438,EyeGaze,right_enter_PFD speed
+15:28:30,247.4063,EyeGaze,right_exit_PFD speed
+15:28:30,247.5036,EyeGaze,right_enter_ND right
+15:28:31,248.408,EyeGaze,right_exit_FMC
+15:28:31,248.4494,EyeGaze,right_enter_Flaps
+15:28:31,248.4794,EyeGaze,right_exit_Flaps
+15:28:31,248.5329,EyeGaze,right_enter_Flaps
+15:28:32,248.8689,EyeGaze,left_exit_Flaps
+15:28:32,248.9114,EyeGaze,left_enter_FMC
+15:28:32,249.4395,EyeGaze,left_exit_ND right
+15:28:33,249.8297,EyeGaze,left_enter_Window middle
+15:28:33,249.9401,EVENTCODE,VARY_SPEED
+15:28:36,253.1294,EVENTCODE,VARY_SPEED
+15:28:36,253.2658,EyeGaze,right_exit_PFD speed
+15:28:36,253.6008,EyeGaze,right_enter_PFD altitude
+15:28:36,253.6709,EyeGaze,right_exit_PFD altitude
+15:28:38,255.5644,EyeGaze,right_enter_Window middle
+15:28:39,256.0799,SPEECH,
+15:28:40,256.8303,EVENTCODE,VARY_SPEED
+15:28:43,259.9785,EyeGaze,right_exit_PFD speed
+15:28:43,260.0048,EyeGaze,right_enter_ND right
+15:28:44,261.2571,EVENTCODE,VARY_SPEED
+15:28:48,265.7683,EVENTCODE,VARY_SPEED
+15:28:51,268.08,WAYPOINT,WAYBI-ZIKKO
+15:28:51,268.1094,EVENTCODE,SET_ALT_HOLD
+15:28:52,269.5005,EVENTCODE,VARY_SPEED
+15:28:54,271.1841,SPEECH,
+15:28:54,271.2136,BUTTONID,HDG_SEL_ON
+15:28:55,272.3271,EVENTCODE,MAIN_AUDIO_END
+15:28:55,272.3529,EVENTCODE,UNLOCK_BUTTON_6R
+15:28:55,272.4797,EyeGaze,right_exit_PFD speed
+15:28:55,272.7425,EyeGaze,right_enter_PFD altitude
+15:28:56,273.0481,EVENTCODE,VARY_SPEED
+15:28:57,274.7194,EyeGaze,left_exit_Window right
+15:28:58,275.1661,EyeGaze,left_enter_Window right
+15:28:58,275.1816,EyeGaze,left_exit_Window right
+15:28:58,275.3632,EyeGaze,left_enter_PFD altitude
+15:28:59,276.1274,EyeGaze,right_exit_FMC
+15:28:59,276.1433,EyeGaze,right_enter_PFD speed
+15:28:59,276.3484,SPEECH,Roger activate Route 2.
+15:28:59,276.3663,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:00,276.8657,EyeGaze,left_exit_Window right
+15:29:00,276.937,EyeGaze,left_enter_PFD altitude
+15:29:00,277.1287,EVENTCODE,VARY_SPEED
+15:29:01,278.3399,EyeGaze,right_exit_FMC
+15:29:02,278.9252,BUTTONID,6R
+15:29:02,278.9541,EVENTCODE,LOCK_FMC
+15:29:02,278.9678,EVENTCODE,UNLOCK_BUTTON_EXEC
+15:29:02,279.539,EyeGaze,right_enter_FMC
+15:29:03,280.3867,EyeGaze,right_exit_FMC
+15:29:03,280.4425,EyeGaze,right_enter_PFD speed
+15:29:03,280.7634,EyeGaze,left_exit_PFD altitude
+15:29:04,281.4022,EVENTCODE,VARY_SPEED
+15:29:06,283.309,SPEECH,Execute confirm.
+15:29:06,283.3256,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:07,283.894,EVENTCODE,MAIN_AUDIO_END
+15:29:07,284.0316,EyeGaze,left_enter_PFD altitude
+15:29:07,284.0316,EyeGaze,right_exit_Window right
+15:29:08,284.9655,EyeGaze,right_enter_PFD altitude
+15:29:08,285.0081,EyeGaze,right_exit_PFD speed
+15:29:08,285.0373,EyeGaze,right_enter_FMC
+15:29:08,285.1202,EVENTCODE,VARY_SPEED
+15:29:09,285.8709,EyeGaze,right_exit_FMC
+15:29:09,286.1347,EyeGaze,right_enter_FMC
+15:29:09,286.4283,BUTTONID,EXEC_HOVER
+15:29:09,286.5544,BUTTONID,EXEC_HOVER
+15:29:09,286.5801,BUTTONID,EXEC
+15:29:09,286.609,EVENTCODE,LOCK_FMC
+15:29:09,286.622,EVENTCODE,Route_2_Activated
+15:29:09,286.6509,EVENTCODE,UNLOCK_LNAV
+15:29:09,286.7909,EyeGaze,right_exit_FMC
+15:29:10,286.8174,EyeGaze,right_enter_FMC
+15:29:10,286.8315,EyeGaze,right_exit_FMC
+15:29:10,286.8613,EyeGaze,right_enter_FMC
+15:29:10,287.1787,EyeGaze,right_exit_FMC
+15:29:10,287.2342,EyeGaze,right_enter_FMC
+15:29:12,289.3365,EVENTCODE,VARY_SPEED
+15:29:12,289.6159,BUTTONID,HEADING_046
+15:29:12,289.6159,BUTTONID,HEADING_046
+15:29:13,289.9911,EyeGaze,left_exit_Window middle
+15:29:15,291.9246,SPEECH,Route 2 activated.
+15:29:15,291.9383,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:15,292.509,EyeGaze,left_enter_PFD altitude
+15:29:15,292.509,EyeGaze,right_exit_Window right
+15:29:15,292.5656,EVENTCODE,VARY_SPEED
+15:29:15,292.5944,EyeGaze,right_enter_PFD altitude
+15:29:16,293.6371,EVENTCODE,MAIN_AUDIO_END
+15:29:16,293.6643,EVENTCODE,UNLOCK_BUTTON_2L
+15:29:20,297.1039,EyeGaze,left_exit_PFD speed
+15:29:20,297.2847,EVENTCODE,VARY_SPEED
+15:29:20,297.6049,EyeGaze,left_enter_Window right
+15:29:20,297.6487,EyeGaze,left_exit_Window right
+15:29:20,297.6752,EyeGaze,left_enter_Window right
+15:29:20,297.6886,EyeGaze,left_exit_Window right
+15:29:21,297.857,SPEECH,Roger directs with AB18.
+15:29:21,297.869,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:21,298.3146,EyeGaze,left_enter_PFD altitude
+15:29:22,299.3331,BUTTONID,2L
+15:29:22,299.3619,EVENTCODE,LOCK_FMC
+15:29:22,299.3753,EVENTCODE,UNLOCK_BUTTON_1L
+15:29:23,299.8069,BUTTONID,1L
+15:29:23,299.8358,EVENTCODE,LOCK_FMC
+15:29:23,299.8485,EVENTCODE,UNLOCK_BUTTON_EXEC
+15:29:23,300.4731,EyeGaze,right_exit_PFD altitude
+15:29:23,300.5015,EyeGaze,left_exit_PFD altitude
+15:29:23,300.5015,EyeGaze,right_enter_Window right
+15:29:23,300.5308,EyeGaze,left_enter_Window right
+15:29:23,300.5308,SPEECH,Alright.
+15:29:23,300.6701,EyeGaze,left_exit_Window right
+15:29:23,300.6965,EyeGaze,left_enter_Window right
+15:29:23,300.7139,EyeGaze,left_exit_Window right
+15:29:24,301.1569,EVENTCODE,VARY_SPEED
+15:29:24,301.6434,EyeGaze,left_enter_PFD speed
+15:29:25,302.6595,BUTTONID,EXEC_HOVER
+15:29:26,302.9102,SPEECH,Execute confirm.
+15:29:26,302.925,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:26,303.1891,BUTTONID,EXEC_HOVER
+15:29:26,303.4125,BUTTONID,EXEC
+15:29:26,303.4392,EVENTCODE,LOCK_FMC
+15:29:26,303.4549,EVENTCODE,Direct_AB18R_Completed
+15:29:27,304.1934,EyeGaze,left_exit_PFD altitude
+15:29:27,304.2065,EyeGaze,left_enter_Window right
+15:29:27,304.2198,EyeGaze,left_exit_Window right
+15:29:27,304.3442,EyeGaze,left_enter_Window right
+15:29:27,304.4269,EyeGaze,left_exit_Window right
+15:29:28,305.0126,EVENTCODE,VARY_SPEED
+15:29:30,306.8363,EyeGaze,left_enter_PFD altitude
+15:29:30,306.908,EyeGaze,right_exit_PFD speed
+15:29:30,306.9333,EyeGaze,right_enter_FMC
+15:29:30,307.4086,EyeGaze,left_exit_FMC
+15:29:30,307.4345,EyeGaze,left_enter_PFD altitude
+15:29:30,307.5891,SPEECH,Direct AB18R.
+15:29:30,307.6031,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:30,307.6199,EVENTCODE,LATERAL_ERROR
+15:29:30,307.6316,BUTTONID,ALTITUDE_6000
+15:29:30,307.6316,EVENTCODE,PF_ACTION_MISSED_APPROACH_ALT
+15:29:31,307.8,WAYPOINT,ZIKKO
+15:29:31,308.2154,EVENTCODE,VARY_SPEED
+15:29:31,308.3825,EyeGaze,right_exit_PFD altitude
+15:29:31,308.5905,EyeGaze,right_enter_PFD altitude
+15:29:33,310.1803,EVENTCODE,MAIN_AUDIO_END
+15:29:36,312.839,EyeGaze,right_exit_Window middle
+15:29:36,313.2139,EVENTCODE,VARY_SPEED
+15:29:36,313.5204,EyeGaze,left_exit_PFD altitude
+15:29:36,313.5204,EyeGaze,right_enter_Window right
+15:29:37,314.3687,SPEECH,6000 check.
+15:29:37,314.3837,EVENTCODE,PLAYER_RESPONSE_PASS
+15:29:37,314.3969,EVENTCODE,UNLOCK_FLAPS
+15:29:37,314.606,EyeGaze,left_enter_PFD altitude
+15:29:37,314.606,EyeGaze,right_exit_Window right
+15:29:38,314.9409,EyeGaze,left_exit_PFD altitude
+15:29:38,314.9409,EyeGaze,right_enter_Window right
+15:29:38,315.1641,EyeGaze,left_enter_PFD altitude
+15:29:38,315.442,EVENTCODE,MAIN_AUDIO_END
+15:29:39,316.1784,EyeGaze,left_exit_PFD altitude
+15:29:39,316.2065,EyeGaze,left_enter_Window right
+15:29:39,316.4431,EyeGaze,right_exit_Window right
+15:29:39,316.4584,EyeGaze,right_enter_PFD altitude
+15:29:40,317.4846,EVENTCODE,VARY_SPEED
+15:29:42,319.1689,EyeGaze,left_exit_Flaps
+15:29:42,319.3351,EyeGaze,left_enter_Flaps
+15:29:43,320.1275,EVENTCODE,Flaps 15
+15:29:43,320.1275,BUTTONID,FLAPS_15
+15:29:44,321.2997,EVENTCODE,VARY_SPEED
+15:29:45,322.1362,BUTTONID,FLAPS_AT_15
+15:29:45,322.735,EyeGaze,left_exit_Flaps
+15:29:45,322.7625,EyeGaze,left_enter_Flaps
+15:29:46,322.8174,EyeGaze,left_exit_Flaps
+15:29:46,323.056,EVENTCODE,Flaps 15
+15:29:46,323.056,BUTTONID,FLAPS_15
+15:29:46,323.1782,EyeGaze,left_enter_Flaps
+15:29:46,323.3726,EyeGaze,left_exit_Flaps
+15:29:46,323.511,EyeGaze,left_enter_Flaps
+15:29:48,325.0583,BUTTONID,FLAPS_AT_15
+15:29:48,325.7401,EyeGaze,left_exit_Flaps
+15:29:49,325.8664,EyeGaze,left_enter_Flaps
+15:29:49,326.1997,EVENTCODE,VARY_SPEED
+15:29:49,326.425,EVENTCODE,Flaps 15
+15:29:49,326.425,BUTTONID,FLAPS_15
+15:29:51,328.3303,EVENTCODE,Flaps 15
+15:29:51,328.3303,BUTTONID,FLAPS_15
+15:29:51,328.6366,EyeGaze,right_exit_Speed Brakes
+15:29:52,328.8449,EyeGaze,right_enter_Flaps
+15:29:52,329.2631,EVENTCODE,VARY_SPEED
+15:29:52,329.56,WAYPOINT,AB18R
+15:29:52,329.5863,EVENTCODE,Switching spline from Flight Path Spline v2 to LatErrorRecoveryWR
+15:29:52,329.5863,EVENTCODE,LATERAL_ERROR
+15:29:52,329.5863,EVENTCODE,LATERAL_ERROR
+15:29:52,329.6037,EVENTCODE,UNLOCK_LNAV
+15:29:53,330.3323,BUTTONID,FLAPS_AT_15
+15:29:54,331.6276,SPEECH,
+15:29:55,332.1182,EyeGaze,left_exit_Flaps
+15:29:55,332.1463,EyeGaze,left_enter_Flaps
+15:29:55,332.2541,EVENTCODE,Flaps 30
+15:29:55,332.2541,BUTTONID,FLAPS_30
+15:29:55,332.2859,EVENTCODE,LOCK_FLAPS
+15:29:56,332.8967,EVENTCODE,VARY_SPEED
+15:29:56,332.9496,EyeGaze,left_exit_Flaps
+15:29:56,332.9651,EyeGaze,left_enter_FMC
+15:29:56,333.2734,EyeGaze,left_exit_FMC
+15:29:56,333.2867,EyeGaze,left_enter_PFD speed
+15:29:56,333.5776,EyeGaze,left_exit_Window middle
+15:29:56,333.6075,EyeGaze,left_enter_Window right
+15:29:56,333.6492,EyeGaze,left_exit_Window right
+15:29:57,334.2612,BUTTONID,FLAPS_AT_30
+15:29:59,335.8485,EyeGaze,left_enter_PFD altitude
+15:29:59,335.8485,EyeGaze,right_exit_Window right
+15:29:59,335.8628,EyeGaze,right_enter_PFD altitude
+15:29:59,336.0858,EyeGaze,left_exit_Flaps
+15:29:59,336.306,EyeGaze,left_enter_Flaps
+15:29:59,336.6117,EyeGaze,left_exit_FMC
+15:29:59,336.627,EyeGaze,left_enter_Window middle
+15:30:00,336.9061,EyeGaze,left_exit_Window middle
+15:30:00,336.9608,SPEECH,Flux 30.
+15:30:00,337.0593,EVENTCODE,VARY_SPEED
+15:30:02,338.9945,EyeGaze,left_enter_Window middle
+15:30:03,340.0386,EyeGaze,right_exit_PFD altitude
+15:30:03,340.0526,EyeGaze,right_enter_PFD altitude
+15:30:04,340.9184,EyeGaze,right_exit_PFD altitude
+15:30:04,341.1105,EVENTCODE,VARY_SPEED
+15:30:04,341.1664,SPEECH,Traps at 30.
+15:30:04,341.1813,EVENTCODE,PLAYER_RESPONSE_PASS
+15:30:04,341.2236,BUTTONID,VERTSPEED_-700
+15:30:04,341.2236,EVENTCODE,PF_ACTION_DESCENT_VERT_SPEED
+15:30:05,342.0017,EyeGaze,right_enter_MCP
+15:30:05,342.4175,EyeGaze,left_exit_MCP
+15:30:05,342.4604,EyeGaze,left_enter_ND left
+15:30:06,343.0462,EVENTCODE,MAIN_AUDIO_END
+15:30:06,343.5743,EyeGaze,right_exit_ChecklistGazeTarget
+15:30:06,343.758,EyeGaze,right_enter_ChecklistGazeTarget
+15:30:07,343.8535,EyeGaze,left_exit_ND right
+15:30:07,343.8672,EyeGaze,left_enter_ND left
+15:30:07,343.96,EVENTCODE,LAT_ERROR_POINT
+15:30:07,344.0467,EyeGaze,left_exit_ND left
+15:30:07,344.0775,EyeGaze,left_enter_ND right
+15:30:07,344.4399,EyeGaze,left_exit_Window right
+15:30:07,344.4525,EyeGaze,left_enter_Window right
+15:30:07,344.4814,EyeGaze,left_exit_Window right
+15:30:07,344.495,EyeGaze,left_enter_Window right
+15:30:08,345.7878,EVENTCODE,VARY_SPEED
+15:30:13,350.0806,EyeGaze,left_exit_Window right
+15:30:13,350.2473,EyeGaze,left_enter_Window right
+15:30:13,350.6075,EyeGaze,left_exit_Window right
+15:30:13,350.6391,EyeGaze,left_enter_Window right
+15:30:13,350.6638,EVENTCODE,VARY_SPEED
+15:30:13,350.6638,EyeGaze,left_exit_Window right
+15:30:14,351.1083,EyeGaze,left_enter_Window right
+15:30:15,352.1818,SPEECH,Browser landing checklist below the line.
+15:30:15,352.1967,EVENTCODE,PLAYER_RESPONSE_PASS
+15:30:15,352.6563,EVENTCODE,MAIN_AUDIO_END
+15:30:15,352.6971,EVENTCODE,PF_ENGAGE_LNAV_CALLOUT
+15:30:15,352.7264,BUTTONID,LNAV_ON
+15:30:16,353.3076,SPEECH,Landing gear.
+15:30:17,354.2694,EyeGaze,right_exit_Window right
+15:30:17,354.2991,EVENTCODE,VARY_SPEED
+15:30:17,354.3112,EyeGaze,right_enter_PFD altitude
+15:30:18,355.2,EyeGaze,right_exit_ND left
+15:30:18,355.4104,EyeGaze,left_exit_ND left
+15:30:18,355.4104,EyeGaze,right_enter_ND right
+15:30:18,355.451,EyeGaze,left_enter_ND right
+15:30:18,355.7449,EyeGaze,right_exit_ND right
+15:30:19,355.8293,EyeGaze,left_exit_ND right
+15:30:19,355.8293,EyeGaze,right_enter_PFD speed
+15:30:19,355.9276,EyeGaze,left_enter_PFD speed
+15:30:19,356.5093,EyeGaze,left_exit_PFD altitude
+15:30:20,356.9157,EyeGaze,left_enter_Window middle
+15:30:20,357.3753,EyeGaze,left_exit_FMC
+15:30:20,357.4714,EyeGaze,left_enter_FMC
+15:30:20,357.6672,SPEECH,00.
+15:30:21,358.3066,EyeGaze,right_exit_FMC
+15:30:21,358.6545,SPEECH,Yeah.
+15:30:22,358.8497,EyeGaze,left_exit_Speed Brakes
+15:30:22,358.8497,EyeGaze,right_enter_FMC
+15:30:22,358.8781,EyeGaze,left_enter_FMC
+15:30:22,358.9059,EyeGaze,right_exit_FMC
+15:30:22,359.0733,EyeGaze,right_enter_PFD speed
+15:30:22,359.2531,EVENTCODE,VARY_SPEED
+15:30:22,359.38,WAYPOINT,BCTL1
+15:30:22,359.4359,EyeGaze,left_exit_Window right
+15:30:22,359.4909,EyeGaze,left_enter_Window right
+15:30:23,360.6742,SPEECH,"Oh, that's not."
+15:30:25,362.54,EVENTCODE,LAT_ERROR_RECOVERY
+15:30:25,362.5814,EVENTCODE,Switching spline from LatErrorRecoveryWR to Wrong Runway v2
+15:30:25,362.62,EVENTCODE,LAT_ERROR_RECOVERY
+15:30:25,362.7616,EyeGaze,left_exit_ND right
+15:30:26,362.8036,EyeGaze,left_enter_ND left
+15:30:26,363.4272,EyeGaze,right_exit_FMC
+15:30:26,363.5391,EyeGaze,right_enter_FMC
+15:30:26,363.5531,EyeGaze,right_exit_FMC
+15:30:26,363.5674,EyeGaze,right_enter_FMC
+15:30:26,363.5813,EyeGaze,right_exit_FMC
+15:30:26,363.7471,EyeGaze,right_enter_FMC
+15:30:27,363.9017,EVENTCODE,VARY_SPEED
+15:30:27,364.2509,EyeGaze,right_exit_FMC
+15:30:27,364.2637,EyeGaze,right_enter_Flaps
+15:30:27,364.7369,EyeGaze,right_exit_Flaps
+15:30:27,364.7489,EyeGaze,left_exit_Flaps
+15:30:27,364.7489,EyeGaze,right_enter_FMC
+15:30:27,364.7659,EyeGaze,left_enter_FMC
+15:30:28,364.8066,EyeGaze,right_exit_FMC
+15:30:28,365.0013,EyeGaze,right_enter_FMC
+15:30:28,365.3778,EVENTCODE,MAIN_AUDIO_END
+15:30:28,365.4615,EyeGaze,right_exit_FMC
+15:30:28,365.6432,EyeGaze,right_enter_PFD altitude
+15:30:28,365.7108,EyeGaze,left_exit_PFD altitude
+15:30:28,365.7247,EyeGaze,left_enter_Window right
+15:30:29,365.8638,EyeGaze,left_exit_Window right
+15:30:29,365.8948,EyeGaze,left_enter_Window right
+15:30:29,365.9214,EyeGaze,left_exit_Window right
+15:30:29,366.7553,EyeGaze,left_enter_PFD altitude
+15:30:29,366.7553,EyeGaze,right_exit_Window right
+15:30:31,367.9671,SPEECH,Flaps.
+15:30:31,367.9813,EVENTCODE,PLAYER_RESPONSE_PASS
+15:30:31,367.9938,EyeGaze,right_enter_PFD altitude
+15:30:31,368.1051,EyeGaze,left_exit_PFD speed
+15:30:31,368.118,EyeGaze,left_enter_FMC
+15:30:31,368.118,EyeGaze,right_exit_ND right
+15:30:31,368.1475,EyeGaze,right_enter_FMC
+15:30:31,368.1751,EyeGaze,left_exit_FMC
+15:30:31,368.2035,EyeGaze,left_enter_Flaps
+15:30:31,368.2991,EyeGaze,left_exit_Flaps
+15:30:31,368.4093,EVENTCODE,VARY_SPEED
+15:30:31,368.4356,EyeGaze,left_enter_Flaps
+15:30:32,368.8517,EyeGaze,right_exit_Flaps
+15:30:32,368.8939,EyeGaze,left_exit_Flaps
+15:30:32,368.8939,EyeGaze,right_enter_FMC
+15:30:32,368.9096,EyeGaze,left_enter_ND right
+15:30:32,369.1033,EyeGaze,left_exit_Window middle
+15:30:32,369.2151,EVENTCODE,MAIN_AUDIO_END
+15:30:32,369.2578,EyeGaze,left_enter_Window right
+15:30:32,369.27,EyeGaze,left_exit_Window right
+15:30:32,369.2855,EyeGaze,left_enter_Window right
+15:30:32,369.314,EyeGaze,left_exit_Window right
+15:30:32,369.3406,EyeGaze,left_enter_Window right
+15:30:32,369.3547,EyeGaze,left_exit_Window right
+15:30:33,369.982,EyeGaze,left_enter_Window right
+15:30:33,370.0774,EyeGaze,left_exit_Window right
+15:30:33,370.1099,EyeGaze,left_enter_Window right
+15:30:33,370.1765,EyeGaze,left_exit_Window right
+15:30:33,370.1918,EyeGaze,left_enter_Window right
+15:30:33,370.342,EyeGaze,left_exit_Window right
+15:30:33,370.355,EyeGaze,left_enter_Window right
+15:30:33,370.3717,EyeGaze,left_exit_Window right
+15:30:33,370.4109,EyeGaze,left_enter_Window middle
+15:30:34,371.3598,EyeGaze,left_exit_Window right
+15:30:35,372.349,EVENTCODE,VARY_SPEED
+15:30:35,372.349,EyeGaze,left_enter_PFD altitude
+15:30:35,372.349,EyeGaze,right_exit_Window right
+15:30:37,374.7733,EyeGaze,left_exit_PFD altitude
+15:30:37,374.7733,EyeGaze,right_enter_Window right
+15:30:38,374.9117,EyeGaze,left_enter_Window right
+15:30:38,374.9954,EyeGaze,left_exit_Window right
+15:30:38,375.4818,EyeGaze,left_enter_Window right
+15:30:38,375.6495,EyeGaze,left_exit_Window right
+15:30:39,375.8155,EyeGaze,left_enter_Window right
+15:30:39,376.0547,SPEECH,30 green light exterior.
+15:30:39,376.0689,EVENTCODE,PLAYER_RESPONSE_PASS
+15:30:39,376.0826,EVENTCODE,MAIN_AUDIO_END
+15:30:39,376.2205,EVENTCODE,VARY_SPEED
+15:30:40,377.28,WAYPOINT,BCTL2
+15:30:40,377.4192,SPEECH,Call Landy Clarence.
+15:30:40,377.4732,EyeGaze,left_exit_ND right
+15:30:40,377.5439,EyeGaze,left_enter_ND right
+15:30:40,377.7519,EyeGaze,right_exit_FMC
+15:30:41,377.8478,EVENTCODE,MAIN_AUDIO_END
+15:30:41,377.8909,EyeGaze,right_enter_Window middle
+15:30:43,379.9522,EVENTCODE,VARY_SPEED
+15:30:46,383.0701,EVENTCODE,VARY_SPEED
+15:30:49,386.5464,EVENTCODE,VARY_SPEED
+15:30:51,388.7191,EyeGaze,right_exit_Window middle
+15:30:51,388.7892,EyeGaze,right_enter_PFD altitude
+15:30:52,389.4849,EyeGaze,left_exit_PFD altitude
+15:30:53,390.2355,EyeGaze,left_enter_Window middle
+15:30:54,391.4639,EVENTCODE,VARY_SPEED
+15:30:54,391.4904,EyeGaze,left_exit_PFD speed
+15:30:54,391.5166,EyeGaze,left_enter_PFD speed
+15:30:56,392.9107,EyeGaze,right_exit_PFD altitude
+15:30:56,392.9248,EyeGaze,right_enter_ND right
+15:30:57,394.2712,EyeGaze,right_exit_MCP
+15:30:57,394.5524,EyeGaze,right_enter_ND right
+15:30:57,394.62,EVENTCODE,MAIN_AUDIO_END
+15:30:58,395.0394,EVENTCODE,1000
+15:30:58,395.7061,EVENTCODE,VARY_SPEED
+15:30:59,395.9557,EyeGaze,left_exit_ND right
+15:30:59,395.971,EyeGaze,left_enter_Window right
+15:30:59,396.1805,EyeGaze,left_exit_Window right
+15:30:59,396.1945,EyeGaze,left_enter_Window right
+15:30:59,396.2231,EyeGaze,left_exit_Window right
+15:30:59,396.2361,EyeGaze,left_enter_Window right
+15:31:00,396.96,WAYPOINT,BCTL3
+15:31:00,396.9764,EVENTCODE,Switching spline from Wrong Runway v2 to Wrong Runway v2
+15:31:00,396.9764,EVENTCODE,WRONG_RUNWAY
+15:31:00,397.3784,SPEECH,
+15:31:01,398.1453,EyeGaze,left_exit_Window right
+15:31:01,398.4366,EyeGaze,left_enter_Window middle
+15:31:02,399.3138,EVENTCODE,VARY_SPEED
+15:31:02,399.6748,EVENTCODE,PF_ACTION_RUNWAY_HEADING
+15:31:03,400.6774,BUTTONID,HEADING_359
+15:31:03,400.6774,BUTTONID,HEADING_359
+15:31:04,401.0697,EyeGaze,right_exit_PFD speed
+15:31:04,401.2779,EyeGaze,left_exit_ND right
+15:31:04,401.2779,EyeGaze,right_enter_PFD speed
+15:31:04,401.3455,EyeGaze,left_enter_PFD speed
+15:31:04,401.4861,EyeGaze,left_exit_PFD speed
+15:31:04,401.5136,EyeGaze,left_enter_ND right
+15:31:05,402.6261,EVENTCODE,VARY_SPEED
+15:31:06,402.8082,EyeGaze,right_exit_MCP
+15:31:06,402.8515,EyeGaze,right_enter_MCP
+15:31:07,403.8116,EVENTCODE,MAIN_AUDIO_END
+15:31:07,403.8254,BUTTONID,Autothrottle
+15:31:08,404.8832,BUTTONID,Autopilot_OFF
+15:31:08,404.9037,EyeGaze,left_exit_Speed Brakes
+15:31:08,405.0498,EyeGaze,left_enter_Speed Brakes
+15:31:09,406.0675,EyeGaze,left_exit_Window right
+15:31:09,406.0815,EyeGaze,left_enter_Window middle
+15:31:09,406.1909,EyeGaze,left_exit_Window middle
+15:31:09,406.2473,EVENTCODE,VARY_SPEED
+15:31:09,406.4143,EyeGaze,left_enter_Window right
+15:31:10,406.8187,EyeGaze,left_exit_IpadGazeTarget
+15:31:10,407.2227,EyeGaze,left_enter_Window middle
+15:31:11,408.2482,EyeGaze,right_exit_Window middle
+15:31:11,408.2899,EyeGaze,right_enter_PFD altitude
+15:31:13,409.94,WAYPOINT,checkerboard
+15:31:13,409.949,EVENTCODE,UNLOCK_FD_SWITCHES
+15:31:13,410.7848,EVENTCODE,VARY_SPEED
+15:31:14,411.0912,EVENTCODE,MAIN_AUDIO_END
+15:31:15,412.3863,SPEECH,
+15:31:17,414.06,WAYPOINT,BCTL4
+15:31:17,414.4622,EyeGaze,right_exit_Window middle
+15:31:17,414.4746,EyeGaze,right_enter_PFD altitude
+15:31:17,414.5305,EyeGaze,right_exit_PFD speed
+15:31:17,414.6002,EyeGaze,right_enter_FMC
+15:31:18,415.1991,EyeGaze,left_exit_FMC
+15:31:18,415.2668,EyeGaze,left_enter_Speed Brakes
+15:31:18,415.2668,EyeGaze,right_exit_FMC
+15:31:18,415.6445,EVENTCODE,VARY_SPEED
+15:31:19,415.812,EyeGaze,right_enter_Window middle
+15:31:21,418.1208,EyeGaze,right_exit_MCP
+15:31:21,418.3854,EyeGaze,right_enter_MCP
+15:31:21,418.3991,EyeGaze,right_exit_MCP
+15:31:21,418.4412,EyeGaze,right_enter_MCP
+15:31:21,418.4548,EyeGaze,right_exit_MCP
+15:31:21,418.5513,EyeGaze,right_enter_ND right
+15:31:22,419.4181,EVENTCODE,VARY_SPEED
+15:31:24,421.2165,EyeGaze,left_exit_Window right
+15:31:24,421.62,WAYPOINT,AB4
+15:31:25,421.8134,EyeGaze,left_enter_MCP
+15:31:25,422.6499,EyeGaze,right_exit_MCP
+15:31:26,422.9532,EyeGaze,right_enter_Window middle
+15:31:26,423.1776,EyeGaze,right_exit_MCP
+15:31:26,423.2191,EyeGaze,right_enter_MCP
+15:31:26,423.4969,EyeGaze,left_exit_MCP
+15:31:26,423.6071,EyeGaze,left_enter_Exterior light
+15:31:26,423.7205,EyeGaze,left_exit_Exterior light
+15:31:27,423.9434,EyeGaze,left_enter_Exterior light
+15:31:27,423.9574,EyeGaze,left_exit_Exterior light
+15:31:27,423.9859,EVENTCODE,VARY_SPEED
+15:31:27,423.9859,EyeGaze,left_enter_Exterior light
+15:31:27,424.6969,EVENTCODE,500
+15:31:28,425.0296,SPEECH,MMM.
+15:31:28,425.2256,EyeGaze,right_exit_ND right
+15:31:28,425.4617,EyeGaze,right_enter_ND right
+15:31:28,425.5873,EyeGaze,right_exit_ND right
+15:31:29,426.5203,EyeGaze,right_enter_MCP
+15:31:29,426.5477,EyeGaze,right_exit_MCP
+15:31:30,427.2717,EyeGaze,right_enter_MCP
+15:31:30,427.314,EyeGaze,right_exit_MCP
+15:31:30,427.7715,EVENTCODE,VARY_SPEED
+15:31:31,428.1205,EyeGaze,right_enter_MCP
+15:31:31,428.5106,EyeGaze,right_exit_MCP
+15:31:32,428.8028,EyeGaze,left_exit_MCP
+15:31:32,428.8028,EyeGaze,right_enter_Window right
+15:31:32,428.8166,EyeGaze,left_enter_Window right
+15:31:32,428.9834,EyeGaze,left_exit_Window right
+15:31:32,429.0941,EyeGaze,left_enter_Window right
+15:31:32,429.1763,EyeGaze,left_exit_Window right
+15:31:33,430.109,EyeGaze,left_enter_MCP
+15:31:33,430.2354,SPEECH,Oh.
+15:31:33,430.7496,EyeGaze,right_exit_MCP
+15:31:34,431.2081,EVENTCODE,400
+15:31:34,431.6968,EyeGaze,right_enter_Window middle
+15:31:35,432.0458,EVENTCODE,VARY_SPEED
+15:31:38,435.0386,SPEECH,A run. Runway run.
+15:31:38,435.2485,EyeGaze,right_exit_Window middle
+15:31:38,435.28,WAYPOINT,BCTL5
+15:31:38,435.7083,EyeGaze,right_enter_Window middle
+15:31:39,436.042,SPEECH,Runway.
+15:31:39,436.3056,EVENTCODE,VARY_SPEED
+15:31:39,436.6852,EVENTCODE,MAIN_AUDIO_END
+15:31:39,436.7099,EVENTCODE,NO_LANDING
+15:31:39,436.78,EyeGaze,right_exit_Window middle
+15:31:40,437.0598,EyeGaze,right_enter_PFD speed
+15:31:40,437.7396,EVENTCODE,END_SCENARIO
+15:31:41,438.5858,EyeGaze,right_exit_Window middle
+15:31:42,439.5474,EyeGaze,right_enter_Window middle
