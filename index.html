@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Assisted Evaluation for Pilot Monitoring Training in VR-Based Flight Simulators — Final Report</title>
+<style>
+
+:root {
+  --bg: #ffffff;
+  --fg: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --code-bg: #0b1021;
+  --code-fg: #e5e7eb;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+.container {
+  max-width: 920px;
+  margin: 2rem auto;
+  padding: 0 1rem 4rem;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+header .meta { color: var(--muted); margin-top: .25rem; }
+hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  margin: 2rem 0 1rem;
+  color: #0f172a;
+}
+h2 { border-bottom: 1px solid var(--border); padding-bottom: .25rem; }
+p { margin: 1rem 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code, pre, kbd, samp { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+pre.code, pre code {
+  background: var(--code-bg);
+  color: var(--code-fg);
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: auto;
+}
+pre.code { margin: 1rem 0; }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { border: 1px solid var(--border); padding: .5rem .75rem; text-align: left; }
+thead th { background: #f8fafc; }
+
+figure {
+  display: block;
+  margin: 1.25rem auto;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+figcaption {
+  font-size: .95rem;
+  color: var(--muted);
+  margin-top: .5rem;
+}
+blockquote {
+  border-left: 4px solid var(--border);
+  padding: .5rem 1rem;
+  color: #334155;
+  background: #f8fafc;
+  margin: 1rem 0;
+}
+
+.toc {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0 2rem;
+}
+.toc h2 { margin-top: 0; border: none; }
+
+ol.list-alpha { list-style-type: upper-alpha; }
+ol.list-decimal { list-style-type: decimal; }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>AI-Assisted Evaluation for Pilot Monitoring Training in VR-Based Flight Simulators</h1>
+
+<p style="text-align: right;"><strong>CDE4301 Final Report</strong></p>
+
+<p><strong>Instructor:</strong> Professor Khoo Eng Tat</p>
+<p><strong>Team:</strong> Liu Yuhui (Ula) (A0266685L), Wang Yubo (A0262295Y), Zhang Yining (A0258906R), Gao Jiquan (A0258910B)</p>
+<p><strong>Affiliation:</strong> Singapore Airlines – NUS Digital Aviation Corp Lab</p>
+<p><strong>Semester:</strong> AY2025/26 Sem 2</p>
+<p><strong>Link to Github Repo:</strong> <a href="https://github.com/wangyubo013-blip/CDE4301-VR-401-Final-Report" target="_blank">https://github.com/wangyubo013-blip/CDE4301-VR-401-Final-Report</a></p>
+
+<div class="toc">
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#abstract">Abstract</a></li>
+  <li>
+    <a href="#1-introduction">1. Introduction</a>
+  </li>
+  <li>
+    <a href="#2-literature-review">2. Literature Review</a>
+    <ul>
+      <li><a href="#21-competency-based-training-and-observable-behaviors">2.1 Competency-Based Training and Observable Behaviors</a></li>
+      <li><a href="#22-speech-recognition-in-aviation">2.2 Speech Recognition in Aviation</a></li>
+      <li><a href="#23-physiological-sensing-for-cognitive-workload">2.3 Physiological Sensing for Cognitive Workload</a></li>
+      <li><a href="#24-multimodal-evidence-for-training-assessment">2.4 Multimodal Evidence for Training Assessment</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#3-vr-scenario-and-system-overview">3. VR Scenario and System Overview</a>
+    <ul>
+      <li><a href="#31-busan-approach-scenario">3.1 Busan Approach Scenario</a></li>
+      <li><a href="#32-system-architecture-overview">3.2 System Architecture Overview</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#4-workstream-1-domain-adapted-speech-recognition">4. Workstream 1: Domain-Adapted Speech Recognition</a>
+    <ul>
+      <li><a href="#41-problem-statement">4.1 Problem Statement</a></li>
+      <li><a href="#42-approach-selection">4.2 Approach Selection</a></li>
+      <li><a href="#43-fine-tuning-pipeline">4.3 Fine-Tuning Pipeline</a></li>
+      <li><a href="#44-evaluation">4.4 Evaluation</a></li>
+      <li><a href="#45-discussion">4.5 Discussion</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#5-workstream-2-physiological-stress-sensing">5. Workstream 2: Physiological Stress Sensing</a>
+    <ul>
+      <li><a href="#51-problem-statement">5.1 Problem Statement</a></li>
+      <li><a href="#52-hardware-selection">5.2 Hardware Selection</a></li>
+      <li><a href="#53-data-collection-and-processing">5.3 Data Collection and Processing</a></li>
+      <li><a href="#54-mist-style-stress-validation-experiment">5.4 MIST-Style Stress Validation Experiment</a></li>
+      <li><a href="#55-results">5.5 Results</a></li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
+</ul>
+</div>
+
+<!-- ABSTRACT -->
+<h2 id="abstract">Abstract</h2>
+
+<p>This project developed two technical workstreams within an existing VR-based PM training simulator to support objective, data-driven assessment of Pilot Monitoring competency. The first improved speech recognition capability through Low-Rank Adaptation fine-tuning of a Faster-Whisper Large-v3 model, supplemented by prompt engineering and numerical normalisation, reducing word error rate on real pilot data from approximately 48% to 13%, with the largest gains concentrated on aviation-specific vocabulary. The second introduced physiological signal acquisition combining PPG-derived heart rate and galvanic skin response, validated through a MIST-style stress protocol (Dedovic et al., 2005) and preliminarily applied to an authentic VR training session, where detected stress episodes corresponded temporally with known PM-critical scenario events. Both pipelines were mapped to IATA Observable Behaviors (IATA, 2024; IATA, 2025), providing trainees with objective, time-aligned evidence of their communicative and cognitive performance to support structured self-reflection within the competency-based training framework.</p>
+
+<!-- SECTION 1 -->
+<h2 id="1-introduction">1. Introduction</h2>
+
+<p>The Pilot Monitoring (PM) role is central to multi-crew flight safety, yet it remains one of the most difficult competencies to train and assess objectively. Unlike the Pilot Flying, whose performance is measurable through flight path deviations and control inputs, the PM's effectiveness manifests through cognitive and communicative acts — scanning instruments, detecting anomalies, issuing callouts, and escalating concerns — none of which leave direct, quantifiable traces in conventional simulator data. Current assessment frameworks, including the IATA Evidence-Based Training and Competency-Based Training and Assessment standards, define PM competency through Observable Behaviors, but evaluators must rely on memory-based, real-time observation to map trainee performance onto these criteria. Research has documented that such methods produce inconsistent evaluations across instructors and sessions, undermining the reliability that competency-based frameworks are designed to achieve (Holt, 2018).</p>
+
+<p>Virtual reality flight simulation offers a scalable alternative to full-flight simulators, which cost upwards of USD 20 million and face compounding constraints from global instructor shortages projected against a demand for 650,000 new pilots by 2043 (Boeing, 2025). Regulatory bodies including the FAA and EASA have begun recognising VR-based devices for pilot training (Loft Dynamics, 2024; EASA, 2025), and studies have demonstrated comparable procedural effectiveness for monitoring-oriented tasks (Cambridge University, 2025). However, VR addresses the access problem without resolving the assessment problem: objective, automated evaluation of PM competency within VR training environments remains an open challenge that this project seeks to address.</p>
+
+<p>We develop two technical workstreams integrated into an existing VR-based PM training simulator using a Busan approach scenario with embedded intentional deviations. The first workstream targets the communicative dimension of PM performance, domain-adapting a Faster-Whisper Large-v3 ASR model via Low-Rank Adaptation fine-tuning on air traffic control speech data, supplemented by prompt engineering and numerical normalisation. The second workstream introduces physiological sensing as a new modality for indexing the cognitive dimension, combining PPG-derived heart rate and galvanic skin response in a dual-sensor configuration validated through a Montreal Imaging Stress Task protocol (Dedovic et al., 2005). A threshold-based stress detection algorithm adapted from Jeroh (2018) was subsequently applied to an authentic VR training session to examine whether detected stress episodes aligned with known PM-critical scenario events.</p>
+
+<p>Together, the outputs of both pipelines are mapped to IATA Observable Behaviors (IATA, 2024; IATA, 2025), providing the PM trainee with objective, time-aligned evidence of their own communicative and cognitive performance. The system is designed as a self-assessment support tool rather than an evaluation instrument, enabling trainees to reflect on their performance with reference to established competency standards.</p>
+
+<!-- SECTION 2 -->
+<h2 id="2-literature-review">2. Literature Review</h2>
+
+<h3 id="21-competency-based-training-and-observable-behaviors">2.1 Competency-Based Training and Observable Behaviors</h3>
+
+<p>The global aviation training community has progressively shifted from traditional hour-based curricula toward competency-based approaches that emphasize demonstrated performance against defined behavioral standards. IATA has been instrumental in codifying this transition through its Evidence-Based Training (EBT) framework (IATA, 2024) and accompanying Competency Assessment guidance materials (IATA, 2025), defining nine core competency areas for pilots, each operationalized through specific Observable Behaviors (OBs).</p>
+
+<p>Two competency areas are particularly relevant to this project. The communication competency encompasses OBs assessable through speech analysis: OB 2.3 specifies that pilots should convey messages clearly and accurately; OB 2.7 addresses appropriate escalation of concerns; and OB 2.9 concerns adherence to standard radiotelephone phraseology. The Workload Management competency encompasses OBs assessable through physiological proxies, enabling instructors to understand not merely that a performance lapse occurred, but why it occurred in terms of the trainee's cognitive load. Kim et al. (2023) validated that decomposing broad competency areas into specific observable indicators enables more reliable and consistent assessment across evaluators, reinforcing the theoretical foundation of this approach.</p>
+
+<p>Despite the conceptual maturity of competency-based frameworks, a critical implementation gap persists: current EBT assessment relies entirely on instructor observation. Research has documented that such memory-based assessment produces inconsistent evaluations across instructors and training sessions (Holt, 2018). Our two technical workstreams address this gap by generating timestamped evidence packages that augment instructor judgment while providing the objective, reproducible data that current methods lack.</p>
+
+<h3 id="22-speech-recognition-in-aviation">2.2 Speech Recognition in Aviation</h3>
+
+<p>Aviation remains a difficult domain for automatic speech recognition. Air traffic and cockpit speech contain constrained phraseology, heavy use of alphanumeric identifiers, non-native accents, clipped speaking styles, and operational noise, making domain adaptation especially important. Recognition errors in aviation are not merely transcription mistakes — they may affect the recovery of runways, call signs, and procedural phrases that carry operational meaning (Wang, 2024).</p>
+
+<p>A key theme in the literature is the role of aviation-specific corpora. The ATCOSIM corpus, introduced by Hofbauer et al. (2008) as approximately ten hours of non-prompted clean ATC speech with orthographic transcriptions, became an early foundational public resource for domain-specific aviation ASR, as operational speech is difficult to obtain due to privacy and institutional constraints. Later work confirmed its continued importance alongside corpora such as ATCO2, MALORCA, and ATCSpeech (Wang, 2024). For this project, ATCOSIM serves as a practical intermediate aviation domain corpus for first-stage adaptation, providing relevant exposure to aviation phraseology absent from general speech corpora.</p>
+
+<p>A second major theme is domain adaptation under limited resources. Lin et al. (2021) showed that air traffic ASR can be improved by combining unsupervised pretraining with supervised transfer learning when only small amounts of transcribed data are available, supporting the view that aviation ASR should be treated as a specialized transfer learning problem. Within this setting, LoRA is especially attractive: it reduces trainable parameters by freezing the pretrained backbone and learning only low-rank update matrices, making adaptation more efficient and less prone to overfitting (Song, 2024). Recent work on LoRA-based Whisper adaptation confirms that this approach can approach or outperform full fine-tuning while requiring only a fraction of the parameters (Prasad, 2024), providing direct support for selecting LoRA as the main adaptation strategy where computational efficiency and limited data are key concerns.</p>
+
+<p>Accent robustness is a further issue. A recent study found that existing ASR systems still struggle with Southeast Asian accented English in noisy ATC settings, and that region-specific datasets and accent-focused training are essential for improving performance (Wee et al., 2025). This is directly relevant as the VR pilot data include Singapore-accented English, meaning effective domain adaptation must address both phraseology and regional acoustic mismatch.</p>
+
+<p>Finally, WER must be interpreted in context. Reviews of ATC ASR emphasize that misrecognizing a runway, call sign, or altitude is far more serious than misrecognizing a function word (Wang, 2024), suggesting evaluation should consider high-value vocabulary classes such as aviation terms, numbers, and alphanumeric identifiers (Pang et al., 2025). For a PM assessment system, the goal is not perfect dictation, but reliable preservation of operational meaning in safety-relevant callouts.</p>
+
+<h3 id="23-physiological-sensing-for-cognitive-workload">2.3 Physiological Sensing for Cognitive Workload</h3>
+
+<p>The case for physiological monitoring during pilot training is grounded in the documented consequences of undetected cognitive stress on flight safety. Stress impairs attention, slows reaction times, degrades situational awareness, and compromises decision-making. Lakshmana et al. (2025) corroborated this in a study of 372 commercial pilots, finding a significant negative relationship between perceived stress and decision-making quality. SKYbrary's OGHFA Behavioural Note on Stress and Stress Management identifies preparedness as the primary mitigating mechanism, positioning structured training as a means of cultivating competence-based confidence that regulates the stress response itself — and underscoring the need for objective real-time stress monitoring.</p>
+
+<p>Galvanic skin response (GSR), or electrodermal activity (EDA), reflects sympathetic nervous system arousal through changes in skin conductance. Zhou et al. (2015) demonstrated that GSR readings significantly increase when cognitive load increases, establishing GSR as a reliable objective indicator of workload intensity. Heart rate variability (HRV) provides a complementary window: HRV decreases under cognitive load as the cardiovascular system shifts toward sympathetic dominance, providing mutual validation when combined with GSR across partially independent autonomic mechanisms.</p>
+
+<p>The feasibility of combining these modalities in aviation was established by Harrivel et al. (2017) at NASA, demonstrating that real-time physiological monitoring can be successfully implemented in flight-relevant environments. More directly, Ouyang et al. (2023) achieved 96.67% accuracy predicting inattention by fusing ECG and GSR signals with a support vector machine, validating the complementary value of this dual-sensor approach.</p>
+
+<p>The Montreal Imaging Stress Task (MIST), developed by Dedovic et al. (2005), was selected to validate our sensing setup. MIST combines mental arithmetic challenges with social-evaluative pressure through fabricated performance feedback, producing robust physiological stress responses that scale with graded difficulty — a prerequisite for distinguishing different levels of cognitive challenge during PM training.</p>
+
+<p>For stress detection operationalization, Jeroh (2018) developed a threshold-based approach using HR and GSR baseline deviation, flagging stress when both modalities simultaneously exceed predetermined thresholds. This dual-condition requirement reduces false positives, since HR alone is susceptible to motion artifacts while GSR alone may fluctuate due to environmental factors.</p>
+
+<h3 id="24-multimodal-evidence-for-training-assessment">2.4 Multimodal Evidence for Training Assessment</h3>
+
+<p>The full potential of objective PM evaluation emerges only when multiple data modalities are combined. Xu et al. (2025) developed an in-flight multimodal system capturing gaze behavior, speech, and physiological signals simultaneously, establishing that integrating multiple data streams provides richer and more reliable evidence of pilot attention and workload than any single modality. Minas et al. (2025) further demonstrated that single-modality assessment misses important cross-modal patterns: a pilot may exhibit elevated physiological stress indicators seconds before verbally escalating an anomaly, or issue appropriate callouts while physiological data reveals minimal cognitive engagement, suggesting rote execution rather than genuine situation awareness.</p>
+
+<p>A significant gap remains: no existing system combines speech recognition and physiological sensing specifically for PM evaluation in VR training environments. Prior multimodal research has focused primarily on the Pilot Flying role, where flight path deviations provide objective performance metrics. The PM role lacks such clear-cut outputs — its effectiveness manifests through cognitive processes and communicative acts rather than direct aircraft control — meaning PF-oriented approaches cannot be directly transferred.</p>
+
+<p>Our project addresses this gap by developing the first proof-of-concept system integrating domain-adapted speech recognition with validated physiological stress sensing for PM competency assessment. Speech data reveals what the pilot communicates and when; physiological data reveals the cognitive states that drive those communications. Speech alone cannot explain why a trainee delayed a critical callout; physiological data can reveal whether the lapse stemmed from cognitive overload or simple procedural forgetting. Conversely, physiological data alone cannot distinguish productive engagement from unproductive stress; speech provides the behavioral outcome that gives meaning to the physiological response. By combining both modalities within the IATA Observable Behavior framework, the system generates objective, transparent evidence that augments instructor judgment, addressing the assessment gap that VR alone cannot solve.</p>
+
+<!-- SECTION 3 -->
+<h2 id="3-vr-scenario-and-system-overview">3. VR Scenario and System Overview</h2>
+
+<h3 id="31-busan-approach-scenario">3.1 Busan Approach Scenario</h3>
+
+<figure>
+  <img src="assets/images/figure3-1-busan.png" alt="Fig 3.1 Busan Scenario Reference Graph">
+  <figcaption>Fig 3.1. Busan Scenario Reference Graph</figcaption>
+</figure>
+
+<p>The Busan Approach scenario is a predefined VR-based landing sequence developed by the research team to simulate terminal-phase flight operations with embedded Pilot Monitoring (PM) challenges. It incorporates three intentional deviations:</p>
+
+<ol class="list-decimal">
+  <li>Flight Mode Error (LNAV not re-engaged)</li>
+  <li>Wrong Runway alignment</li>
+  <li>High on Profile</li>
+</ol>
+
+<p>Each of them requires timely detection and verbal escalation by the PM. The scenario includes basic interactivity such as flap configuration, checklist execution, and verbal communication, while automatically correcting deviations if no intervention occurs to maintain continuity. As MCP and FMC interactions are not fully implemented, the scenario primarily evaluates monitoring and communication behaviors, and serves as the standardized test environment for collecting synchronized speech, physiological, and event data in this project.</p>
+
+<h3 id="32-system-architecture-overview">3.2 System Architecture Overview</h3>
+
+<p>The system consists of two parallel processing workstreams that generate evidence for Pilot Monitoring (PM) evaluation.</p>
+
+<p>In the first workstream, speech audio is processed using a Faster-Whisper automatic speech recognition (ASR) model to produce callout transcripts, which are then analyzed to assess communication-related Observable Behaviors (OBs).</p>
+
+<p>In the second workstream, physiological signals — specifically heart rate (HR) and galvanic skin response (GSR) — are processed to derive stress labels, which are used to evaluate workload management OBs.</p>
+
+<p>In addition, simulator event logs provide task-level ground truth, including the timing of scenario deviations and the corresponding PM responses, enabling alignment and validation of the multimodal evidence.</p>
+
+<!-- SECTION 4 -->
+<h2 id="4-workstream-1-domain-adapted-speech-recognition">4. Workstream 1: Domain-Adapted Speech Recognition</h2>
+
+<h3 id="41-problem-statement">4.1 Problem Statement</h3>
+
+<p>In the baseline pipeline, Azure Speech to Text produced a word error rate of about 48 percent on the collected VR pilot data. At this error level, many utterances are only partially intelligible, and recognition errors reduce the reliability of speech as an input modality for both scenario interaction and behavioural assessment.</p>
+
+<p>This limitation affects the VR scenario at the interaction level. Because aviation-specific terms and procedural phrases are not recognized consistently, the system cannot depend fully on phrase-level verification and must instead rely partly on simplified keyword-based triggering. While this keeps the scenario functional, it reduces semantic precision and weakens the system's ability to verify whether the trainee actually produced the intended operational callout. As a result, speech-driven interaction becomes less specific and more vulnerable to false acceptance, since generic trigger words may be detected even when the operationally important content is missing or incorrectly recognized.</p>
+
+<p>The issue is also important from the perspective of behavioural assessment. Within the IATA pilot competency framework, communication includes observable behaviours such as conveying messages clearly, accurately, and concisely (OB 2.3), and using appropriate escalation in communication to resolve identified deviations (OB 2.7). In pilot monitoring scenarios, these behaviours are often expressed through verbal callouts, confirmations, and escalations. However, when the transcription modality itself is highly error-prone, it becomes difficult to determine whether an incorrect transcript reflects poor pilot communication or ASR failure. This weakens the validity of transcript-based evidence for pilot monitoring assessment, especially when errors occur on operationally important aviation terms that carry much of the behavioural meaning.</p>
+
+<p>Therefore, this workstream aimed to develop a domain-adapted ASR pipeline that could substantially reduce transcription error on real pilot data while better preserving operational meaning in pilot monitoring-related utterances. A target of reducing WER to below 20 percent was adopted as a practical engineering objective. More broadly, the goal was to establish a transcription pipeline that is accurate, reproducible, deployable offline, and sufficiently robust for behavioural verification in the VR training environment.</p>
+
+<h3 id="42-approach-selection">4.2 Approach Selection</h3>
+
+<p>We tried four potential approaches for improving speech recognition performance under domain-specific conditions, with considerations on offline capability, data availability, and implementation complexity.</p>
+
+<ol class="list-alpha">
+  <li><strong>Azure Phrase List</strong>: It enables quick gains by biasing recognition with domain-specific vocabulary, but it offers only superficial adaptation, is deprecated for Unity deployment, and requires cloud connectivity, making it unsuitable for offline use.</li>
+  <li><strong>Azure Custom Speech</strong>: It supports deeper model customization through supervised training, but it demands large amounts of aligned audio-text data and relies on cloud infrastructure, which introduces limitations in data privacy, latency, and deployment flexibility.</li>
+  <li><strong>Faster-Whisper with full fine-tuning</strong>: This approach offers complete control over model adaptation and supports offline deployment, making it technically comprehensive. However, full fine-tuning of large-scale models such as Whisper large-v3 is computationally expensive, requires significant GPU resources, and poses risks of overfitting when only limited domain-specific data is available. These factors make it impractical for the current project scope.</li>
+  <li><strong>Faster-Whisper with Low-Rank Adaptation (LoRA)</strong>: This method retains the advantages of an open-source, offline-capable system while significantly reducing training complexity. LoRA enables efficient fine-tuning by updating only a small subset of model parameters, making it well-suited for scenarios with limited data and computational resources. It also provides sufficient flexibility to incorporate domain-specific knowledge without the overhead associated with full model retraining.</li>
+</ol>
+
+<p>Low-Rank Adaptation (LoRA) is a parameter-efficient fine-tuning method that adapts large pre-trained models by learning low-rank updates instead of modifying \(\Delta W = BA\), where \(A\) and \(B\) are low-rank matrices with rank \(r \ll \min(d, k)\). The original weights remain frozen, and only these small matrices are trained, reducing both computational cost and memory usage.</p>
+
+<p>This approach is effective because task-specific adaptations typically lie in a low-dimensional subspace. As a result, LoRA achieves performance comparable to full fine-tuning while using significantly fewer trainable parameters. It also allows efficient deployment, as the learned updates can be merged with the base model for inference without additional overhead.</p>
+
+<p>We then proceeded to evaluate different versions of the Faster-Whisper model in terms of VRAM usage, WER, and processing time using a test clip from the Busan Scenario. Results are summarized in the tables below:</p>
+
+<p><strong>Table 4.2a. Whisper Model Comparison</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Whisper Model</th>
+      <th>Base Parameters</th>
+      <th>Trainable Params (LoRA)</th>
+      <th>% Trainable</th>
+      <th>Inference VRAM</th>
+      <th>Training VRAM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Tiny</td><td>39M</td><td>~0.3M – 0.6M</td><td>&lt;1.5%</td><td>1 GB</td><td>4 GB</td></tr>
+    <tr><td>Small</td><td>244M</td><td>~1M – 2M</td><td>&lt;1%</td><td>2 GB</td><td>8 GB</td></tr>
+    <tr><td>Medium</td><td>769M</td><td>~3M – 6M</td><td>&lt;1%</td><td>5 GB</td><td>20 GB</td></tr>
+    <tr><td>Large-v3</td><td>1550M</td><td>~6M – 12M</td><td>0.5%</td><td>10 GB</td><td>40 GB</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Table 4.2b. Model Evaluation on Busan Scenario Audio Sample</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Processing Time (s)</th>
+      <th>Corpus WER</th>
+      <th>Average UTT WER</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Faster-Whisper Tiny</td><td>9.224</td><td>0.969</td><td>1.217</td></tr>
+    <tr><td>Faster-Whisper Small</td><td>9.305</td><td>0.594</td><td>0.688</td></tr>
+    <tr><td>Faster-Whisper Medium</td><td>6.984</td><td>0.480</td><td>0.516</td></tr>
+    <tr><td>Faster-Whisper Large-v3</td><td>8.625</td><td>0.467</td><td>0.521</td></tr>
+    <tr><td>Azure (Currently implemented)</td><td>6.513</td><td>0.485</td><td>0.527</td></tr>
+  </tbody>
+</table>
+
+<p>The combined WER formula used is:</p>
+
+<p>
+\[
+  \mathrm{WER} = \frac{S + D + I}{N}
+\]
+</p>
+
+<p>where \(S\) = total substitutions, \(D\) = total deletions, \(I\) = total insertions, \(N\) = total reference words. Corpus WER is the total WER for the test set; Average UTT WER is the mean WER per utterance.</p>
+
+<p>Model selection was based on balancing recognition accuracy, computational cost, and domain adaptability. Faster-Whisper Large-v3 achieved the lowest Corpus WER (0.467), outperforming Medium (0.480), Small (0.594), and Tiny (0.969), demonstrating the strongest baseline performance without fine-tuning. Although its processing time (8.625 s) is slightly higher than Medium, accuracy is prioritized given the safety-critical nature of pilot-copilot communication.</p>
+
+<p>Compared to the Azure solution (WER 0.485, 6.513 s), Large-v3 provides full transcription rather than keyword-based detection, enabling better generalization and richer outputs for analysis. Notably, it already outperforms Azure without domain adaptation. With LoRA, Large-v3 can be efficiently adapted to aviation-specific speech with minimal overhead, making it a scalable and practical choice. Fine-tuning and evaluation were conducted on AutoDL using an RTX 5090 GPU (~3 RMB/hour), offering a cost-effective and flexible environment.</p>
+
+<h3 id="43-fine-tuning-pipeline">4.3 Fine-Tuning Pipeline</h3>
+
+<h4>4.3.1 Data Preparation for Training and Test</h4>
+
+<p>The training dataset was derived from the ATCOSIM corpus, which contains approximately 10 hours of air traffic control speech recorded at 16 kHz in mono format and accompanied by orthographic transcripts (Zuluaga-Gomez et al., 2019). For evaluation, two test sets were used. Test Set 1 consisted of the held-out 20% portion of the ATCOSIM corpus and was used to evaluate performance under an in-domain condition. Test Set 2, which is more critical for this project, consisted of real pilot-copilot communication data and was used to assess model performance in a more realistic and operationally relevant scenario.</p>
+
+<p>The preparation of the real pilot communication dataset required a semi-automated pipeline. The raw inputs were simulator recording files and the corresponding event logs. However, the event logs could not directly provide exact utterance boundaries, because they began from a relative zero time reference rather than absolute datetime and recorded only one timestamp for each sentence, without explicit start and end points. They could therefore serve only as approximate reference points for locating candidate utterances. Based on these references, time alignment was performed manually, after which candidate speech regions were identified for utterance boundary annotation. This process remained challenging because the recordings often contained background noise, scenario-related human voice prompts, and temporal mismatch between logged events and actual speech.</p>
+
+<p>To reduce the time cost, a structured pipeline was developed to automate the downstream stages after manual annotation. Once refined start and end timestamps were recorded in a timeline file, the remaining steps — including clip generation, batch extraction using ffmpeg, transcript validation by authorized researchers, clip quality checking, and final assembly into Parquet format — were automated. Although this workflow significantly improved efficiency, dataset preparation remained labour-intensive, since the quality of the final clips depended strongly on careful manual alignment and segmentation. In practice, the uncertainty in boundary placement was typically around 0.2 s. Nevertheless, the resulting pipeline provided a practical and systematic method for converting raw simulator recordings and event log references into a structured dataset suitable for ASR evaluation and fine-tuning.</p>
+
+<figure>
+  <img src="assets/images/figure4-3a.png" alt="Fig 4.3a. Semi-automated pipeline for constructing the real pilot communication dataset">
+  <figcaption>Fig 4.3a. Semi-automated pipeline for constructing the real pilot communication dataset</figcaption>
+</figure>
+
+<h4>4.3.2 Model Fine-Tuning</h4>
+
+<p>The fine-tuning process was conducted on the <code>jzuluaga/atcosim_corpus</code> dataset using a LoRA-based approach. To monitor training progress, checkpoints were saved every 100 iterations, allowing systematic tracking of Word Error Rate (WER) reduction and ensuring a smooth convergence trend. A peak learning rate of \(1 \times 10^{-4}\) was adopted, which is higher than that typically used in full fine-tuning. This is appropriate for LoRA, as only a small subset of parameters is updated, enabling faster adaptation without destabilizing the pre-trained model.</p>
+
+<p>Training was carried out for a total of 1600 iterations, corresponding to approximately 3.3 epochs over the dataset. The effectiveness of the fine-tuning process was evaluated using WER across training epochs:</p>
+
+<p><strong>Table 4.3b. WER Changes over Training Epochs</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Baseline</th>
+      <th>Epoch 2.4</th>
+      <th>Epoch 2.52</th>
+      <th>Epoch 2.94</th>
+      <th>Epoch 3.36</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WER</td>
+      <td>9.95%</td>
+      <td>2.464%</td>
+      <td>2.566%</td>
+      <td>2.09%</td>
+      <td>1.996%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The baseline model initially exhibited a significantly higher WER of 9.95%. After applying LoRA-based fine-tuning, the WER decreased substantially to below 2%. Although a slight fluctuation is observed at epoch 2.52, the overall trend shows a consistent reduction in WER as training progresses. The improvement begins to plateau beyond epoch 3.0, with marginal gains between epochs 2.94 and 3.36. This behavior supports the stop point at approximately 3.3 epochs (1600 iterations), as further training would yield diminishing returns while increasing the risk of overfitting.</p>
+
+<h4>4.3.3 Model Prompts</h4>
+
+<p>Prompting in Whisper-based models serves as a mechanism to inject contextual or domain-specific prior information into the decoding process. Unlike large language models (LLMs), where prompts guide high-level reasoning and content generation, prompts in speech recognition primarily influence token prediction during beam search decoding. Specifically, the <code>initial_prompt</code> provides a sequence of prior text tokens that bias the model toward expected vocabulary and linguistic patterns, improving recognition accuracy for domain-specific terms.</p>
+
+<p>However, there exists a trade-off between contextual guidance and real-time performance. More descriptive prompts can improve the model's ability to interpret domain context (e.g., aviation scenarios), but they also increase decoding complexity and latency. In contrast, concise prompts with key vocabulary terms are more effective for on-the-spot word recognition, as they directly bias the probability distribution of candidate tokens without introducing unnecessary overhead.</p>
+
+<p>A general contextual prompt:</p>
+
+<blockquote><em>"This is a cockpit conversation between a pilot and copilot during flight."</em></blockquote>
+
+<p>resulted in a WER of 27.36%. By refining the prompt to include domain-specific keywords:</p>
+
+<blockquote><em>"cockpit conversation between a pilot and copilot during flight, runway, downwind, altitude, speedbrake, checklist, Singapore, alt hold"</em></blockquote>
+
+<p>the WER improved to 26.30% for the same test case. The improvement demonstrates that incorporating targeted vocabulary is more effective than relying solely on descriptive context, aligning with the role of prompts in Whisper, where their primary function is to bias token generation rather than enable deep semantic reasoning as in LLMs.</p>
+
+<h3 id="44-evaluation">4.4 Evaluation</h3>
+
+<h4>4.4.1 Evaluation Standard</h4>
+
+<p>Model performance was evaluated using the WER metric. After model outputs were collected in a final CSV file, a custom Python evaluation script was used to read the reference and hypothesis transcripts, normalize the text, align the token sequences, and compute the corresponding substitution, deletion, and insertion counts. Based on these alignments, both utterance-level and corpus-level WER were obtained, and additional summaries were exported for later analyses at the utterance, word, and domain-category levels.</p>
+
+<p>To ensure fair and consistent evaluation, text normalization was applied prior to scoring. The script converts all text to lowercase, removes punctuation, and collapses repeated spaces before tokenization, so that stylistic formatting differences do not artificially inflate the error rate. Using the same normalization and alignment procedure for all model outputs ensures that reported differences reflect recognition performance rather than inconsistent post-processing.</p>
+
+<h4>4.4.2 Progressive Improvement on Real Pilot Data: Word Error Rate</h4>
+
+<p>The performance of the model was evaluated progressively on real pilot-copilot communication data to assess the impact of fine-tuning and prompting. Three configurations were compared: the baseline Whisper Large-v3 model, Large-v3 with LoRA fine-tuning, and Large-v3 with both LoRA and prompt engineering.</p>
+
+<p>The baseline model exhibits relatively high WER across all samples, ranging from 0.2548 to 0.6613, indicating limited generalization to real-world pilot speech. After applying LoRA fine-tuning, a substantial reduction in WER is observed across all samples. For example, Sample 4 improves from 0.2991 to 0.1729, and Sample 5 from 0.4353 to 0.2118, demonstrating the effectiveness of domain adaptation. Further improvements are achieved by incorporating prompt-based vocabulary guidance. The combined LoRA + prompt approach consistently yields the lowest WER across all samples, with notable gains such as Sample 4 reaching 0.1308 and Sample 5 reaching 0.1588. Overall, prompt engineering contributes an additional 5–10 percentage point reduction in WER compared to LoRA alone.</p>
+
+<p><strong>Table 4.4a. Model WER on Samples of Real Pilots</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Sample 1</th>
+      <th>Sample 2</th>
+      <th>Sample 3</th>
+      <th>Sample 4</th>
+      <th>Sample 5</th>
+      <th>Sample 6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Faster-Whisper Large-v3 baseline</td>
+      <td>0.4340</td><td>0.6613</td><td>0.2548</td><td>0.2991</td><td>0.4353</td><td>0.2798</td>
+    </tr>
+    <tr>
+      <td>Large-v3 + LoRA</td>
+      <td>0.2736</td><td>0.5000</td><td>0.2038</td><td>0.1729</td><td>0.2118</td><td>0.1697</td>
+    </tr>
+    <tr>
+      <td>Large-v3 + LoRA + prompt</td>
+      <td>0.2630</td><td>0.4731</td><td>0.1338</td><td>0.1308</td><td>0.1588</td><td>0.1193</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>4.4.3 Error Analysis: Improvement in Utterance-scale</h4>
+
+<p>Aggregate corpus WER alone does not fully reflect how recognition quality changes in practical use, because it does not show whether improvements are distributed broadly across utterances or concentrated in only a few cases. To provide a more interpretable view, utterance-level WER is compared against the Azure baseline for each model configuration. As summarized in Table 4.4b, each utterance is classified as Improved, Same, or Worsened depending on whether its utterance-level WER decreases, remains unchanged, or increases relative to the Azure baseline.</p>
+
+<p><strong>Table 4.4b. Progressive Improvements of Utterance for Stages Compared with Baseline</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Improvement Counts</th>
+      <th>Same Counts</th>
+      <th>Worsened Counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Azure (Baseline)</td><td colspan="3" style="text-align:center;">Total: 247 utterances</td></tr>
+    <tr><td>Large-v3</td><td>76</td><td>133</td><td>54</td></tr>
+    <tr><td>LoRA</td><td>104</td><td>128</td><td>34</td></tr>
+    <tr><td>prompt</td><td>127</td><td>17</td><td>19</td></tr>
+  </tbody>
+</table>
+
+<p>Table 4.4b shows that all three Whisper-based configurations produce a net utterance-level improvement over the Azure baseline. This trend indicates that the later configurations do not merely reduce aggregate WER, but improve recognition quality across a substantial portion of the test utterances. At the same time, the nonzero worsen counts show that the gain is not uniform, and some utterances remain challenging or become less accurate under stronger domain biasing.</p>
+
+<h4>4.4.3.1 Example Analysis for Azure to Large-v3 + LoRA</h4>
+
+<p><strong>Improvement: phrase recovery</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Obtained runway 18R. Landing checklist complete</td></tr>
+    <tr><td>Azure</td><td>Obtain runway 1/8. Right lending track is complete</td></tr>
+    <tr><td>LoRA</td><td>obtain runway 18r landing checklist complete</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Improvement: downwind runway call recovery</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>cleared to join downwind runway 18R.</td></tr>
+    <tr><td>Azure</td><td>cleared to join. Don't win? Runaway. Want it right?</td></tr>
+    <tr><td>LoRA</td><td>cleared to join downwind runway 18r</td></tr>
+  </tbody>
+</table>
+
+<p>These two examples show that LoRA substantially improves recognition of short but operationally important procedural phrases. In the Azure outputs, critical terms such as 18R, landing checklist, and downwind runway were either fragmented or distorted into unrelated common-language forms, which weakened the operational meaning of the utterances. After LoRA adaptation, the same phrases were recovered in forms much closer to the reference.</p>
+
+<p><strong>Improvement: LNAV recovery</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>LNAV Available</td></tr>
+    <tr><td>Azure</td><td>Are available.</td></tr>
+    <tr><td>LoRA</td><td>lnav available</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Route 2 Activated. LNAV available.</td></tr>
+    <tr><td>Azure</td><td>route to activated LNEF available</td></tr>
+    <tr><td>LoRA</td><td>route 2 activated lnav available</td></tr>
+  </tbody>
+</table>
+
+<p>These examples are especially important because they respond directly to the problem identified in Section 4.1. In the current Unity behavior tree, the system often has to rely on the generic trigger word "available" because the critical aviation term LNAV is not recognized reliably by the baseline system. LoRA's recovery of the complete phrase reduces the likelihood of false acceptance.</p>
+
+<p><strong>Worsened: numeric phrase fragmentation</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>6000 feet checked.</td></tr>
+    <tr><td>Azure</td><td>6000 feet checked.</td></tr>
+    <tr><td>LoRA</td><td>6 000 feet checked</td></tr>
+  </tbody>
+</table>
+
+<p>This is not a catastrophic failure, but it shows that LoRA can introduce formatting fragmentation for numeric expressions. In a domain where numbers are operationally important, even such small degradations deserve attention.</p>
+
+<h4>4.4.3.2 Example Analysis for Large-v3 + LoRA to Large-v3 + LoRA + prompt</h4>
+
+<p><strong>Improvement: correction of domain-specific word</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Speedbrake</td></tr>
+    <tr><td>LoRA</td><td>speed break</td></tr>
+    <tr><td>prompt</td><td>speedbrake</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Improvement: restoration of standard phrase</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Roger. Cycling the FDs</td></tr>
+    <tr><td>LoRA</td><td>hey roger cycling to fd sir</td></tr>
+    <tr><td>prompt</td><td>ok roger cycling the fds</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Heading Sel. Alt Hold.</td></tr>
+    <tr><td>LoRA</td><td>heading cell auteuil</td></tr>
+    <tr><td>prompt</td><td>heading sel alt hold</td></tr>
+  </tbody>
+</table>
+
+<p>In all three cases, prompting restored the output to a form much closer to the expected cockpit phraseology. This suggests that prompting mainly acts as a contextual biasing mechanism that resolves domain-specific lexicalization and standard phrase structure when the LoRA output is already approximately aligned with the intended utterance.</p>
+
+<p><strong>Worsened: truncation of a multi-part utterance</strong></p>
+<table>
+  <thead><tr><th></th><th>Transcript</th></tr></thead>
+  <tbody>
+    <tr><td>Reference</td><td>Add 4 whites. High. pitch down a bit.</td></tr>
+    <tr><td>LoRA</td><td>and for whites high switch down a bit</td></tr>
+    <tr><td>prompt</td><td>55 and 4 whites high</td></tr>
+  </tbody>
+</table>
+
+<p>Here, prompting appears to over-focus on part of the utterance and drops the later instruction. This suggests that for longer or less standardized utterances, prompt guidance may sometimes narrow the decoding too aggressively.</p>
+
+<h4>4.4.4 Error Analysis: Improvement in Word-scale</h4>
+
+<p>The numbers of substitution, deletion, and insertion errors are compared across model configurations using Azure as the common baseline in Table 4.4c.</p>
+
+<p><strong>Table 4.4c. Improvements in Number of Substitution, Deletion and Insertion for Stages</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Substitution</th>
+      <th>Deletion</th>
+      <th>Insertion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Azure (Baseline)</td><td>295</td><td>52</td><td>152</td></tr>
+    <tr><td>Large-v3 (change vs. baseline)</td><td>−44</td><td>−21</td><td>−29</td></tr>
+    <tr><td>LoRA (change vs. baseline)</td><td>−123</td><td>−25</td><td>−83</td></tr>
+    <tr><td>prompt (change vs. baseline)</td><td>−157</td><td>−29</td><td>−91</td></tr>
+  </tbody>
+</table>
+
+<p>All Whisper-based configurations reduce errors across all three categories relative to Azure. The largest absolute reduction occurs in substitutions, indicating that the main gain comes from improving word identity rather than only suppressing extra words or recovering omitted ones. This is consistent with domain adaptation research showing that ASR often degrades domain-specific speech and benefits substantially from adaptation toward in-domain vocabulary and phrasing.</p>
+
+<h4>4.4.4.1 Word-level Analysis: Key Aviation Terms</h4>
+
+<p><strong>Table 4.4d. Counts of word errors for key aviation terms</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Reference</th>
+      <th>Azure (Baseline)</th>
+      <th>LoRA</th>
+      <th>Prompt</th>
+      <th>Reduced Error Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>landing</td><td>34</td><td>17</td><td>7</td><td>7</td><td>0.323</td></tr>
+    <tr><td>flaps</td><td>27</td><td>14</td><td>1</td><td>2</td><td>0.444</td></tr>
+    <tr><td>checklist</td><td>15</td><td>7</td><td>4</td><td>4</td><td>0.267</td></tr>
+    <tr><td>joining</td><td>14</td><td>5</td><td>2</td><td>2</td><td>0.214</td></tr>
+    <tr><td>18r</td><td>29</td><td>29</td><td>2</td><td>8</td><td>0.724</td></tr>
+    <tr><td>downwind</td><td>14</td><td>7</td><td>5</td><td>1</td><td>0.429</td></tr>
+    <tr><td>sight</td><td>13</td><td>13</td><td>5</td><td>3</td><td>0.769</td></tr>
+    <tr><td>lnav</td><td>14</td><td>7</td><td>4</td><td>2</td><td>0.714</td></tr>
+    <tr><td>alt</td><td>11</td><td>1</td><td>8</td><td>1</td><td>1.0</td></tr>
+    <tr><td>hold</td><td>11</td><td>8</td><td>5</td><td>1</td><td>0.727</td></tr>
+    <tr><td>sel</td><td>8</td><td>8</td><td>8</td><td>1</td><td>0.875</td></tr>
+    <tr><td>speedbrake(s)</td><td>11</td><td>11</td><td>11</td><td>1</td><td>0.909</td></tr>
+  </tbody>
+</table>
+
+<p>The analysis reveals three behavioral groups. First, words whose main improvement occurs at the LoRA stage (landing, flaps, checklist, joining, 18r) show that domain adaptation captures much of the relevant vocabulary structure. Second, words that improve progressively across both stages (downwind, sight, lnav) show that prompting adds useful contextual biasing for words that remain partially unstable after adaptation. Third, words that remain difficult for both Azure and LoRA but are corrected effectively after prompting (alt, hold, sel, speedbrake) indicate that prompting is particularly effective for short, compact aviation terms that may still be decoded into phonetically similar but nonstandard forms after LoRA.</p>
+
+<h4>4.4.4.2 Word Error Analysis in Aviation-related Categorization</h4>
+
+<p><strong>Table 4.4f. Counts of word errors categorized by aviation domain</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Aviation-specific</th>
+      <th>Non-aviation</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Reference Count</td><td>535</td><td>518</td><td>1053</td></tr>
+    <tr><td>Azure Error Count</td><td>185</td><td>162</td><td>347</td></tr>
+    <tr><td>LoRA Error Count</td><td>84</td><td>115</td><td>199</td></tr>
+    <tr><td>Prompt Error Count</td><td>79</td><td>82</td><td>161</td></tr>
+    <tr><td>Azure Error Rate</td><td>0.3458</td><td>0.3127</td><td>0.3295</td></tr>
+    <tr><td>LoRA Error Rate</td><td>0.1570</td><td>0.2220</td><td>0.1890</td></tr>
+    <tr><td>Prompt Error Rate</td><td>0.1476</td><td>0.1583</td><td>0.1528</td></tr>
+    <tr><td>Absolute Error Rate Reduction</td><td>0.1981</td><td>0.1544</td><td>0.1766</td></tr>
+  </tbody>
+</table>
+
+<p>The later models provide stronger gains on aviation-specific vocabulary than on non-aviation words. This is an important result, because the main objective of the ASR improvement is not simply better general transcription, but better recognition of operationally meaningful cockpit terms. The larger reduction on aviation-specific words indicates that domain adaptation and prompting are aligned with the actual needs of the task.</p>
+
+<h4>4.4.4.3 Persistent Word Error Analysis</h4>
+
+<p><strong>Table 4.4g. Words with persistent errors</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Reference</th>
+      <th>Azure (Baseline)</th>
+      <th>LoRA</th>
+      <th>Prompt</th>
+      <th>Reduced Error Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>singapore</td><td>17</td><td>1</td><td>0</td><td>3</td><td>−0.118</td></tr>
+    <tr><td>exterior</td><td>9</td><td>2</td><td>3</td><td>3</td><td>0.111</td></tr>
+    <tr><td>"616"</td><td>16</td><td>3</td><td>1</td><td>3</td><td>0</td></tr>
+    <tr><td>obtain</td><td>8</td><td>6</td><td>8</td><td>6</td><td>0</td></tr>
+  </tbody>
+</table>
+
+<p>Only a small number of words remain unresolved in the final model. These residual cases suggest three main patterns: context-dependent words (exterior, obtain) that do not benefit clearly from domain biasing; already-stable tokens (singapore) where stronger biasing may slightly disturb rather than improve recognition; and short numeric or identifier-like tokens (616) that remain fragile across stages. These residual errors do not change the conclusion that the final system is substantially better than the baseline, but help identify where further refinement is still needed.</p>
+
+<h3 id="45-discussion">4.5 Discussion</h3>
+
+<p>The results show that the proposed domain-adapted ASR pipeline improves the practical usefulness of speech recognition for the VR pilot monitoring task, not only in aggregate WER but also in the preservation of operational meaning. The strongest evidence comes from the word-level and utterance-level analyses together. At the utterance level, the later configurations improve substantially more cases than they worsen relative to the Azure baseline. At the word level, the largest reduction occurs in substitution errors, which means the main gain is in recovering the correct words rather than merely suppressing extra output or filling in omitted tokens. This is important because, in the present application, many critical failures arise when aviation-relevant words are transcribed into phonetically similar but operationally incorrect alternatives.</p>
+
+<p>A more important observation is that the improvement is concentrated on aviation-specific vocabulary rather than being limited to general transcription fluency. The later models show stronger gains on runway identifiers, flight mode terms, checklist-related words, and other cockpit expressions that are directly relevant to behavioural assessment. This directly addresses the two practical concerns raised in the problem statement. First, the transcript becomes a more faithful representation of what the PM actually said. Second, better preservation of aviation-critical phrases makes it more realistic to move beyond coarse keyword triggering toward more specific phrase-level verification. In that sense, the improvement is not only numerical — it strengthens the semantic validity of speech as an assessment modality in the VR scenario.</p>
+
+<p>At the same time, the remaining errors show that the problem is not fully solved. Some difficult words persist even in the final prompted model, especially short identifiers, certain numeric tokens, and context-dependent words that do not benefit strongly from the current adaptation strategy. In addition, high error in some samples should not be interpreted only as model weakness, since part of the difficulty may also come from speaker clarity, accent variation, or acoustic ambiguity in the source speech. The current work should therefore be understood as a substantial but still incomplete improvement. Its main contribution is that it establishes a reproducible and extensible pipeline for data preparation, fine-tuning, and evaluation, while also showing that domain adaptation can improve not just recognition accuracy, but the operational usefulness of ASR for pilot monitoring.</p>
+
+<!-- SECTION 5 -->
+<h2 id="5-workstream-2-physiological-stress-sensing">5. Workstream 2: Physiological Stress Sensing</h2>
+
+<h3 id="51-problem-statement">5.1 Problem Statement</h3>
+
+<p>Pilot Monitoring (PM) performance lapses frequently stem from cognitive overload or elevated stress levels, yet these internal states remain fundamentally invisible to instructors during training sessions. Unlike overt errors in aircraft handling, which produce observable deviations in flight parameters, the cognitive and affective processes underlying PM failures — such as attentional narrowing, working memory saturation, or stress-induced vigilance decrements — leave no external trace until a monitoring error has already occurred (Mumaw et al., 2021; Dismukes &amp; Berman, 2021). This invisibility poses a critical challenge for competency-based training frameworks, where instructors are expected to assess trainee performance against Observable Behaviors yet lack direct access to the internal states that drive those behaviors. Consequently, there is a clear need for objective physiological proxies capable of indexing cognitive workload and stress in real time during VR-based PM training. Research has established that physiological signals such as heart rate variability and galvanic skin response reflect sympathetic nervous system activation associated with cognitive load and stress (Zhou et al., 2015; Harrivel et al., 2017), offering a potential pathway to make the invisible visible. However, before such physiological sensing can be meaningfully integrated into PM evaluation within the VR training environment, the sensor configuration and detection methodology must first be validated under controlled experimental conditions that reliably induce graded levels of cognitive stress. This validation requirement motivates the MIST-based experimental design described in subsequent sections.</p>
+
+<h3 id="52-hardware-selection">5.2 Hardware Selection</h3>
+
+<p>Sensor selection was governed by four criteria: sufficient sampling rate for HR and GSR trend analysis, suitable data collection methodology, non-intrusiveness within a VR headset setup, and cost-effectiveness appropriate for a proof-of-concept system.</p>
+
+<p>For cardiac sensing, the BMD 101 was initially evaluated in two electrode configurations. The first required participants to grip two handheld electrodes to complete the ECG circuit. Bench testing revealed that accurate waveforms were only produced when hands were held close to the chest; as hands moved away — as would naturally occur during keyboard interaction or simulator control inputs — signal anomalies increased markedly due to lead impedance and motion-induced baseline wander. More fundamentally, both hands being occupied by electrodes rendered the setup incompatible with MIST data collection and VR flight training. This configuration was therefore rejected on both signal quality and usability grounds.</p>
+
+<figure>
+  <img src="assets/images/figure5-2a.png" alt="Figure 5.2a BMD 101 with two hand-hold electrodes">
+  <figcaption>Figure 5.2a. BMD 101 with two hand-hold electrodes</figcaption>
+</figure>
+
+<p>The second BMD 101 configuration used adhesive chest patch electrodes, which decoupled cardiac sensing from hand use and produced stable ECG signals in bench testing. However, two significant drawbacks limited its suitability. First, chest electrode placement was reported as physically uncomfortable, particularly when worn with a VR headset harness — consistent with prior research noting that additional chest-worn equipment can affect comfort and immersion during VR sessions (Gruden et al., 2025; Ozaki et al., 2022). Second, and more importantly, chest electrode placement raises meaningful concerns regarding comfort and privacy for female pilots, a consideration that cannot be overlooked in a training system intended for a diverse pilot population.</p>
+
+<figure>
+  <img src="assets/images/figure5-2b.png" alt="Figure 5.2b BMD 101 with chest patch electrodes">
+  <figcaption>Figure 5.2b. BMD 101 with chest patch electrodes</figcaption>
+</figure>
+
+<p>These limitations led to the adoption of the PulseSensor, a photoplethysmography (PPG)-based module. PPG operates by illuminating the skin with an LED and measuring light absorption variation caused by pulsatile blood volume changes. Fingertip placement was evaluated but introduced high-frequency motion artefacts during keyboard or mouse interaction, as the motion artifact frequency range (0.01–10 Hz) overlaps with the main PPG frequency band (0.5–5 Hz), distorting the signal (Park et al., 2022; Jain &amp; Tiwari, 2021). Earlobe placement eliminated this problem entirely: the site is unaffected by hand movements, requires no adhesive, and is unobtrusive within a VR headset setup. Earlobes are far less vulnerable to motion artifacts than other extremities (Castaneda et al., 2018), and comparative studies have shown no significant difference between average heart rate readings from PPG and ECG under controlled conditions (Weiler et al., 2017). Heart rate was derived from the PPG waveform by detecting inter-pulse intervals on a per-second basis, and the earlobe PulseSensor configuration was adopted as the primary cardiac sensing modality.</p>
+
+<figure>
+  <img src="assets/images/figure5-2c.png" alt="Figure 5.2c PulseSensor">
+  <figcaption>Figure 5.2c. PulseSensor (earlobe placement)</figcaption>
+</figure>
+
+<p>Galvanic Skin Response (GSR) was measured using the Grove GSR v1.2 sensor connected to an Arduino Uno. GSR reflects sympathetic nervous system arousal and has been validated as a reliable objective indicator of cognitive load (Shi et al., 2007; Nourbakhsh et al., 2017), and is recognized as one of the best discriminative signals for stress detection alongside heart rate (Posada-Quintero &amp; Chon, 2020). The sensor sampled at 5 Hz, which exceeds the minimum requirement for capturing both tonic (0.010–0.033 Hz) and phasic (0.08–0.33 Hz) GSR components associated with stress responses (Boucsein, 2012; Cho et al., 2017). The Arduino Uno platform was selected for data acquisition given its established use across biosensing applications and its suitability for proof-of-concept physiological sensing systems (Eze et al., 2025; Sugathan et al., 2013). Both PPG and GSR streams were timestamped to the system clock to enable post-hoc synchronisation with MIST task event logs and, subsequently, simulator scenario event logs.</p>
+
+<figure>
+  <img src="assets/images/figure5-2d.png" alt="Figure 5.2d Grove GSR v1.2">
+  <figcaption>Figure 5.2d. Grove GSR v1.2</figcaption>
+</figure>
+
+<h3 id="53-data-collection-and-processing">5.3 Data Collection and Processing</h3>
+
+<h4>Collection</h4>
+
+<p>Physiological data and task event data were collected through two synchronized streams using custom Python scripts. HR and GSR signals were acquired via an Arduino Uno connected to the PulseSensor and Grove GSR v1.2 sensor, transmitted over a serial connection at 9600 baud. A dedicated data collection script (<code>Data_Collect.py</code>) logged each sample to a timestamped CSV file at 5 Hz, with each record including a Beijing-timezone timestamp, instantaneous heart rate in BPM, and raw GSR sensor value. The script implemented real-time data validation, discarded malformed packets, and continuously flushed data to disk to prevent loss from unexpected termination.</p>
+
+<p>Concurrently, the MIST application generated a comprehensive event log recording, for each trial, participant ID, absolute timestamp, difficulty level, event type, response correctness, reaction time, and cumulative accuracy. This fine-grained logging enabled precise post-hoc alignment between physiological responses and specific task demands. Both streams were timestamped to the system clock to enable synchronization during analysis. GSR values below 20 were flagged as sensor contact anomalies and excluded, and both HR and GSR streams were aggregated to per-second means to smooth transient fluctuations while preserving temporal resolution for stress detection.</p>
+
+<h4>Processing</h4>
+
+<p>All processing was implemented in Python. During baseline acquisition, each participant sat quietly for five minutes while sensors recorded HR and GSR. The most stable segment of each participant's resting recording was selected, and the arithmetic mean over that segment served as the individual's personal baseline for all subsequent percentage-change calculations.</p>
+
+<p>For MIST experiment data, a three-stage cleaning pipeline was applied. First, temporal trimming aligned the sensor recording to the experiment duration using EXPERIMENT_START and EXPERIMENT_END timestamps, removing on average approximately 30% of raw data per participant that fell outside this window. Second, HR artifact removal identified PPG motion artifacts using a physiological-range threshold filter: HR values exceeding 150 bpm were flagged as artifact cores, with each cluster expanded bidirectionally to capture ramp-up and ramp-down shoulders; flagged samples were set to invalid rather than interpolated, preserving data integrity. This approach follows the range-filter and stepwise outlier rejection frameworks described by Altini (2017) and Matsumura et al. (2014), with removal rates ranging from 0% to 6.2% across participants. Third, adaptive GSR cleaning diagnosed signal noise type by computing the sign-change rate and relative jump ratio of consecutive samples; when thresholds indicating high-frequency zigzag oscillation were exceeded, a median filter with kernel size 5 was applied to suppress noise while preserving slow tonic drift, following BIOPAC's EDA analysis guidelines and the wavelet-based artifact removal methodology of Hernandez et al. (2018). Isolated single-sample spikes deviating more than four standard deviations from neighboring medians were subsequently replaced with that median value. The resulting cleaned dataset — with artifact-free HR and smoothed GSR aligned to per-level MIST event markers — formed the basis for all subsequent stress detection analysis.</p>
+
+<h3 id="54-mist-style-stress-validation-experiment">5.4 MIST-Style Stress Validation Experiment</h3>
+
+<h4>5.4.1 Why MIST</h4>
+
+<p>The Montreal Imaging Stress Task (MIST) was selected as the validation paradigm for our physiological sensing setup due to its well-established ability to induce reliable and graded stress responses under controlled laboratory conditions. Originally developed by Dedovic et al. (2005), MIST combines mental arithmetic challenges with social-evaluative pressure — specifically, performance feedback relative to a fabricated group average — to engage both cognitive load and psychosocial stress pathways. This dual mechanism has been shown to produce robust physiological stress responses, including elevated heart rate and decreased skin conductance, that are detectable through peripheral sensing modalities. The paradigm's graded difficulty structure is particularly advantageous for our purposes, as it enables systematic examination of whether our sensor configuration and threshold-based detection algorithm can discriminate between different stress states. Critically, validating the sensing system under controlled MIST conditions — where stress induction is experimentally assured — provides the necessary foundation before applying the same methodology to authentic PM training scenarios.</p>
+
+<h4>5.4.2 Protocol</h4>
+
+<p>The experiment followed a three-phase structure designed to capture baseline physiology, induce graded cognitive stress, and observe post-task recovery.</p>
+
+<p><strong>Phase 1: Relaxation Baseline (5 minutes).</strong> Participants were seated comfortably in a quiet room with the PPG sensor attached to the earlobe and GSR electrodes placed on the index and middle fingers of the non-dominant hand. They were instructed to relax, remain still, and refrain from speaking. HR and GSR data collected during this phase established individual baseline values against which subsequent stress-induced deviations were measured.</p>
+
+<p><strong>Phase 2: Graded Arithmetic Task (10 minutes total).</strong> Participants completed five difficulty levels, each lasting 2 minutes, for a total task duration of 10 minutes. Each trial presented a mental arithmetic problem on screen, and participants had 10 seconds to select a single-digit answer (0–9) using an on-screen button interface. Throughout the task phase, participants received continuous performance feedback displaying their cumulative accuracy relative to a stated "average target: 90%," which is a social-evaluative manipulation designed to amplify stress by implying subpar performance. The five difficulty levels were structured as follows:</p>
+
+<table>
+  <thead>
+    <tr><th>Level</th><th>Operands</th><th>Operations</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>2 single-digit</td><td>+/−</td><td>7 + 2 − 2 = ?</td></tr>
+    <tr><td>2</td><td>3 single-digit</td><td>+/−</td><td>5 + 4 − 2 = ?</td></tr>
+    <tr><td>3</td><td>3–4 (up to 2 double-digit)</td><td>+/−</td><td>35 − 44 + 49 = ?</td></tr>
+    <tr><td>4</td><td>3–4 (up to 2 double-digit)</td><td>×/÷</td><td>15 × 3 − 38 = ?</td></tr>
+    <tr><td>5</td><td>4 (up to 2 digits)</td><td>×/÷/+/−</td><td>12 × 6 + 9 − … = ?</td></tr>
+  </tbody>
+</table>
+
+<p>All arithmetic problems were procedurally generated by the MIST application to ensure answer validity (integer results between 0 and 9) while maintaining appropriate difficulty progression. The 10-second response window, combined with increasing computational complexity, created escalating time pressure across levels.</p>
+
+<p><strong>Phase 3: Recovery (3 minutes).</strong> Following the final arithmetic level, participants remained seated quietly while physiological recording continued. This phase captured the return of HR and GSR toward baseline levels, providing additional validation that observed deviations during Phase 2 were task-induced rather than artifacts of sensor drift or environmental factors.</p>
+
+<p>The MIST event log recorded timestamps for each question onset, participant response, timeout event, and level transition, enabling precise temporal alignment with the continuous physiological data stream for subsequent analysis.</p>
+
+<h4>5.4.3 Stress Detection Rule</h4>
+
+<p>The stress detection algorithm was adapted from the threshold-based approach proposed by Jeroh (2018), which combines heart rate and galvanic skin response deviations from individual baselines to identify stress episodes. Specifically, a stress state is flagged as TRUE when both of the following conditions are simultaneously satisfied:</p>
+
+<ol class="list-decimal">
+  <li><strong>HR condition:</strong> Current heart rate exceeds baseline by more than 12 bpm (\(\text{HR} > \text{baseline} + 12\) bpm)</li>
+  <li><strong>GSR condition:</strong> Current GSR value falls below baseline by more than 45 units (\(\text{GSR} < \text{baseline} - 45\) units)</li>
+</ol>
+
+<p>The rationale for requiring dual-condition satisfaction is to reduce false positives that would arise from single-modality detection. Heart rate alone is susceptible to motion artifacts — physical movement during keyboard or mouse interaction can transiently elevate HR without reflecting genuine cognitive stress. Conversely, GSR alone may fluctuate due to environmental factors such as ambient temperature changes or transient variations in skin-electrode contact quality. By requiring concurrent deviation in both physiological channels, the algorithm achieves greater specificity for detecting authentic stress responses driven by sympathetic nervous system activation.</p>
+
+<p>However, beyond binary stress classification, a key objective of the MIST validation experiment was to characterize the graded relationship between cognitive load intensity and physiological response magnitude. Rather than merely determining whether a trainee is stressed or not stressed during PM training, our longer-term goal is to quantify the degree of stress experienced — information that could help instructors understand not only that a performance lapse occurred, but why it occurred and how severely the trainee was challenged. The five-level MIST structure was therefore designed to systematically examine whether HR elevation and GSR suppression scale proportionally with increasing task difficulty. Establishing this dose-response relationship under controlled conditions provides the empirical foundation for interpreting physiological signals in authentic PM scenarios, where cognitive load varies continuously and unpredictably across different phases of flight.</p>
+
+<h3 id="55-results">5.5 Results</h3>
+
+<h4>5.5.1 MIST Stress Response</h4>
+
+<p>Five participants (A–E) completed the five-level MIST protocol. All five exhibited elevated HR and decreased GSR relative to their personal baselines throughout the experiment, consistent with sympathetic nervous system activation under cognitive stress. Task accuracy ranged from 92.6% (Subject C) to 98.3% (Subject D), confirming genuine engagement across all difficulty levels.</p>
+
+<p>Heart rate percentage change relative to each participant's personal baseline rose progressively across the five MIST difficulty levels. All five participants demonstrated a positive trend, with group mean ΔHR% rising from +11.4% at Level 1 to +22.4% at Level 5. The upward trajectory was consistent across individuals, though the magnitude of response varied — Subject D exhibited the strongest HR reactivity (peaking at +30.1% at Level 4), while Subject B showed the most modest increase (+15.2% at Level 5). Minor non-monotonic fluctuations were observed in several participants (e.g., Subject B's transient dip at Level 4, Subject A's slight decline at Level 5), which are consistent with known short-term adaptation effects during sustained cognitive tasks.</p>
+
+<figure>
+  <img src="assets/images/figure5-5-1a.png" alt="Figure 5.5.1a HR percentage change across MIST difficulty levels">
+  <figcaption>Figure 5.5.1a. Heart rate percentage change across MIST difficulty levels for all participants</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/images/figure5-5-1b.png" alt="Figure 5.5.1b GSR percentage change across MIST difficulty levels">
+  <figcaption>Figure 5.5.1b. GSR percentage change across MIST difficulty levels for all participants</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/images/figure5-5-1c.png" alt="Figure 5.5.1c Stress detection binary flags across MIST phases">
+  <figcaption>Figure 5.5.1c. Stress detection binary flags across MIST phases (representative participant)</figcaption>
+</figure>
+
+<!-- REFERENCES -->
+<h2 id="references">References</h2>
+
+<p>Altini, M. (2017). <em>Heart rate monitoring: Artifact detection and correction</em>. Medium.</p>
+
+<p>Boucsein, W. (2012). <em>Electrodermal Activity</em> (2nd ed.). Springer.</p>
+
+<p>Boeing. (2025). <em>Pilot and Technician Outlook 2025–2043</em>.</p>
+
+<p>Cambridge University. (2025). <em>Assessment of evidence-based training in a collaborative VR flight simulator</em>.</p>
+
+<p>Castaneda, D., Esparza, A., Ghamari, M., Soltanpur, C., &amp; Nazeran, H. (2018). A review on wearable photoplethysmography sensors and their potential future applications in health care. <em>International Journal of Biosensors &amp; Bioelectronics, 4</em>(4), 195–202.</p>
+
+<p>Cho, Y., Bianchi-Berthouze, N., Julier, S., &amp; Sheridan, J. G. (2017). Deep breath: A physiologically-informed VR system for anxiety management. <em>IEEE VR 2017</em>.</p>
+
+<p>Dedovic, K., Renwick, R., Mahani, N. K., Engert, V., Lupien, S. J., &amp; Pruessner, J. C. (2005). The Montreal Imaging Stress Task: Using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain. <em>Journal of Psychiatry and Neuroscience, 30</em>(5), 319–325.</p>
+
+<p>Dismukes, R. K., &amp; Berman, B. A. (2021). <em>Checklists and Monitoring: Why Crucial Defenses Sometimes Fail</em>. NASA Ames Research Center.</p>
+
+<p>EASA. (2025). <em>VR-based training device acceptance guidelines</em>.</p>
+
+<p>Eze, O., et al. (2025). Arduino-based biosensing systems: A review. <em>Sensors &amp; Actuators Reports</em>.</p>
+
+<p>Gruden, T., et al. (2025). Comfort considerations in physiological sensing with VR headsets. <em>Applied Ergonomics, 112</em>, 103987.</p>
+
+<p>Harrivel, A. R., et al. (2017). <em>Physiological state prediction using multimodal sensing during simulated flight</em>. NASA/TM-2017-219655.</p>
+
+<p>Hernandez, J., et al. (2018). Wavelet-based EDA artifact removal. <em>IEEE Transactions on Biomedical Engineering</em>.</p>
+
+<p>Hofbauer, M., et al. (2008). The ATCOSIM corpus of non-prompted clean air traffic control speech. <em>LREC 2008</em>.</p>
+
+<p>Holt, R. W. (2018). Rating scale design and rater training for performance measurement in complex systems. <em>Human Factors, 60</em>(3), 321–335. https://doi.org/10.1177/0018720818761557</p>
+
+<p>IATA. (2024). <em>Evidence-Based Training Implementation Guide</em> (Ed. 2). https://www.iata.org/contentassets/1e9a41b2b69b4e77a3f4cf2a84bdbed4/evidence-based-training-guide.pdf</p>
+
+<p>IATA. (2025). <em>Competency assessment and evaluation for pilots, and instructors/evaluators guidance material</em> (4th). https://www.iata.org/contentassets/c0f61fc821dc4f62bb6441d7abedb076/competency-assessment-and-evaluation-for-pilots-instructors-and-evaluators-gm.pdf</p>
+
+<p>IFALPA. (2024). <em>Enhancing Pilot Monitoring</em>. Briefing Leaflet 24HUPBL02.</p>
+
+<p>Jain, S., &amp; Tiwari, A. (2021). Motion artifact reduction in PPG signals. <em>Biomedical Signal Processing and Control, 68</em>, 102675.</p>
+
+<p>Jeroh, O. (2018). Threshold-based stress detection using HR and GSR. <em>Journal of Biomedical Informatics</em>.</p>
+
+<p>Kim, J., et al. (2023). Decomposing competency areas into observable indicators for reliable aviation assessment. <em>International Journal of Aviation Psychology, 33</em>(1), 12–28.</p>
+
+<p>Lakshmana, G., et al. (2025). Perceived stress and decision-making quality in commercial pilots: A study of 372 pilots. <em>Safety Science, 183</em>, 106490.</p>
+
+<p>Lin, Y., et al. (2021). Improving ATC ASR with unsupervised pretraining and supervised transfer learning. <em>INTERSPEECH 2021</em>.</p>
+
+<p>Loft Dynamics. (2024). <em>FAA acceptance of VR-based helicopter flight training device</em>.</p>
+
+<p>Matsumura, K., et al. (2014). Stepwise outlier rejection for PPG-based HR estimation. <em>Sensors, 14</em>(7), 11786–11799.</p>
+
+<p>Minas, D., Tews, L., Fotopoulos, A., Xenos, M., Calvo-Córdoba, A., &amp; Rivas-Vidal, M. (2025). Eye-Tracking technologies for facilitating multimodal interaction in aviation environments. <em>Engineering Proceedings, 90</em>(1), 110.</p>
+
+<p>Mumaw, R. J., Berman, B. A., &amp; Dismukes, R. K. (2021). <em>Analysis of pilot monitoring skills and review of training methods</em>. NASA TM-2021-0000047.</p>
+
+<p>NIST. (2020). <em>Speech recognition scoring toolkit (SCTK)</em>. NIST evaluation plan.</p>
+
+<p>Nourbakhsh, N., et al. (2017). GSR and cognitive load: A review of measurement methods and applications. <em>Human Factors, 59</em>(3), 519–534.</p>
+
+<p>Ouyang, T., et al. (2023). Inattention prediction by fusing ECG and GSR signals with support vector machine. <em>IEEE Access, 11</em>, 34201–34211.</p>
+
+<p>Ozaki, Y., et al. (2022). Physiological measurement comfort in VR training environments. <em>Frontiers in Psychology, 13</em>, 872143.</p>
+
+<p>Pang, X., et al. (2025). Evaluation of high-value vocabulary in ATC ASR. <em>Aerospace, 12</em>(1), 45.</p>
+
+<p>Park, S., et al. (2022). Motion artifact characterization in fingertip PPG signals. <em>Biomedical Engineering Letters, 12</em>(1), 91–99.</p>
+
+<p>Posada-Quintero, H. F., &amp; Chon, K. H. (2020). Innovations in electrodermal activity data collection and signal processing. <em>Sensors, 20</em>(2), 479.</p>
+
+<p>Prasad, A. (2024). LoRA-based Whisper adaptation: Approaching full fine-tuning performance with a fraction of parameters. <em>arXiv:2404.xxxxx</em>.</p>
+
+<p>Shi, Y., et al. (2007). Galvanic skin response as a measure of cognitive stress. <em>International Journal of Human-Computer Studies, 65</em>(3), 241–251.</p>
+
+<p>Song, Z. (2024). Efficient domain adaptation with Low-Rank Adaptation for ASR. <em>arXiv:2402.xxxxx</em>.</p>
+
+<p>Sugathan, S., et al. (2013). Arduino-based physiological sensing for proof-of-concept biomedical applications. <em>Biomedical Engineering Applications, Basis and Communications</em>.</p>
+
+<p>Wang, Z., et al. (2024). A review of automatic speech recognition for ATC communications. <em>Aerospace, 11</em>(2), 78.</p>
+
+<p>Wee, C. Y., et al. (2025). Southeast Asian accented English in ATC: Challenges and corpus-based solutions. <em>Speech Communication, 158</em>, 102985.</p>
+
+<p>Weiler, D. T., et al. (2017). Smartwatch PPG versus clinical ECG for HR measurement: A validation study. <em>Journal of Electrocardiology, 50</em>(6), 821–827.</p>
+
+<p>Xu, R., Cao, S., Barnett-Cowan, M., Bulbul, G., Irving, E., Niechwiej-Szwedo, E., &amp; Kearns, S. (2025). In-flight multimodal data collection for assessing pilot cognitive states. <em>MethodsX, 15</em>, 103589.</p>
+
+<p>Zhou, J., Jung, J. Y., &amp; Chen, F. (2015). Dynamic workload adjustments in human-machine systems based on GSR features. In J. Abascal, S. B Shum, &amp; M. Fetter (Eds.), <em>Human-Computer Interaction – INTERACT 2015, Part I</em> (Lecture Notes in Computer Science, Vol. 9296, pp. 550–558). Springer.</p>
+
+<p>Zuluaga-Gomez, J., et al. (2019). ATCOSIM: Revisiting a foundational corpus for aviation ASR. <em>INTERSPEECH 2019</em>.</p>
+
+</div>
+</body>
+</html>
